@@ -1,0 +1,7 @@
+﻿
+.NavigationWindowBlind {
+    z-index: $z-index-navigation-window-blind;
+    background: $background-window-blind;
+    @include box-all-body (fixed);
+    cursor: pointer;
+}

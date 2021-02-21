@@ -1,0 +1,286 @@
+@mixin block-hidden {
+        z-index: 0;
+        font-size: 0em;
+        border: 0px;
+        width: 0;
+        height: 0;
+}
+@mixin box-all-body ($position: absolute, $top:0, $right:0, $bottom:0, $left:0){
+    position: $position;
+    top: $top;
+    right:  $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin box-central-position($position: fixed, $left: 50%, $top: 50%, $translateX: -50%, $translateY: -50%){
+    position: $position;
+    left: $left; 
+    top: $top; 
+    transform: translate($translateX, $translateY);
+}
+
+@mixin box-central-flex($display:flex, $height: 100%, $width:100%, $justify-content:flex-start, $align-items: center){
+    display: $display;
+    height: $height;
+    width: $width;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin children-center($align-items:center){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: $align-items;
+}
+
+@mixin tr-border{
+        border-style: solid;
+        border-width: 0 .5px .5px 0;
+        border-color: $table-border-color;
+}
+
+@mixin button-before{
+        opacity: 0;
+        position: absolute;
+        width: 30%;
+        top:105%;
+        transition: all 200ms ease-in-out;
+        font-size: 1.1rem;
+        font-family: $font-family-1;
+        font-style: $font-style-before;
+}
+@mixin childrenAllParent{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+
+@mixin button-window-closse-x{
+        width: 30px;
+        height: 30px;
+        margin: -20px;
+        align-items: center;
+        outline: none !important;
+
+        > * > span {
+            font-size: 1.5rem;
+            color: $warning-color;
+        }
+
+        > * > span:hover {
+            font-size: 1.8rem;
+            color: $warning-color-hover;
+        }
+}
+
+@mixin form-window{
+    > form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+
+        > div {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            margin: 1% 0;
+
+            > label:not(.beautifulCheckbox) {
+                width: 25%;
+                padding-right: 2%;
+                text-align: right;
+            }
+            >label:hover{
+               color: $warning-color-hover;
+                font-weight: 900;
+            }
+
+
+            > input:not(.beautifulCheckbox> input) {
+                width: 70%;
+                height: 40px;
+                padding-left: 3%;
+                outline: none !important;
+                border: 1px solid $focus-shadow;
+                border-radius: 2px;
+                background: $table-background;
+                color: $warning-color;
+                font-size: 1.2rem;
+                font-style: normal;
+
+                placeholder{
+                    font-family: $font-family-1;
+                    font-size: 1.1em;
+                    font-style: italic;
+                }
+            }
+
+            >input:focus, 
+            >select:focus, 
+            >select:hover, 
+            >input:hover{
+                background: $focus-background;
+                color: $warning-color-hover;
+                box-shadow: $personalize-shadow_hover;
+
+            }
+            > input:invalid {
+                box-shadow: 0px 0px 5px 5px $invalid-shadow;
+                background: $invalid-background;
+            }
+            >p{
+                padding-left: 7em;
+                color: $warning-color-p;
+            }
+        }
+    }
+}
+
+@mixin buttons-console-yes-no{
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        color: $warning-color;
+        margin: 1.5rem 0 1rem 0;
+
+        > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 135px;
+            height: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 4px;
+            padding: .9rem 0 0.1rem 0;
+            margin: 0 1rem;
+            background: $warning-button-background;
+            box-shadow: $warning-button-shadow;
+
+            > * {
+                width: 100%;
+                height: 100%;
+                font-size: 1.1rem;
+                text-align: center;
+                text-decoration: none;
+                color: $warning-color;
+            }
+        }
+
+        > div:hover {
+            transition: all 150ms ease-in-out;
+            background: $warning-button-background_hover;
+            box-shadow: $warning-button-shadow_hover;
+
+            > * {
+                transition: all 150ms ease-in-out;
+                font-size: 1.2rem;
+                color: $warning-color-hover;
+            }
+        }
+
+        > div:active {
+            transition: all 200ms ease-in-out;
+            background: $warning-button-background_active;
+            box-shadow: $warning-button-shadow_active;
+
+            > * {
+                transition: all 150ms ease-in-out;
+                font-size: 1.1rem;
+            }
+        }
+}
+
+@mixin buttons-console-footer-window{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: $warning-color;
+        margin: 1.2rem 0 .1rem 0;
+        width: 100%;
+        cursor: pointer;
+
+        > div {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 3px;
+            padding: .9rem 0 0.1rem 0;
+            margin: 0 .5rem;
+            
+            > * {
+                width: 100%;
+                height: 100%;
+                font-size: 1.1rem;
+                text-align: center;
+                text-decoration: none;
+                color: $warning-color;
+            }
+        }
+        >div:nth-child(1){
+                width: 7em;
+                background: $warning-button-background;
+                box-shadow: $warning-button-shadow;
+                >span:nth-child(1){
+                    width: 0;
+                }
+            }
+        >div:nth-child(2), >div:nth-child(3){
+            width: 3em;
+            background: inherit;
+            box-shadow: 0px 1px 2px 1px inherit;
+            opacity: .5;
+        }
+        >div:nth-child(2):hover, >div:nth-child(3):hover{
+                opacity: 1;
+            }
+
+        > div:hover {
+            transition: all 150ms ease-in-out;
+            background: $warning-button-background_hover;
+            box-shadow: $warning-button-shadow_hover;
+
+            > * {
+                font-size: 1.2rem;
+                color: $warning-color-hover;
+            }
+        }
+
+        > div:active {
+            transition: all 200ms ease-in-out;
+            background: $warning-button-background_active;
+            box-shadow: $warning-button-shadow_active;
+
+            > * {
+                font-size: 1.1rem;
+            }
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

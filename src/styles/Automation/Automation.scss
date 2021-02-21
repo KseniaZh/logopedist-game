@@ -1,0 +1,60 @@
+﻿
+.automation-wrapper {
+    user-select: none;
+    display: flex;
+    position: relative;
+    width: 90%;
+    background: $background-home;
+    margin-left: 2%;
+    margin-right: 500px;
+    flex-direction: column;
+}
+
+.automation-buttons-blocks {
+    display: flex;
+    flex-direction: row;
+
+    > div {
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+    }
+
+    > :nth-child(1) {
+        width: 15%;
+    }
+
+    > :nth-child(2) {
+        width: 65%;
+    }
+
+    > :nth-child(3) {
+        width: 20%;
+    }
+}
+
+.button-block {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+.heart {
+    color: purple;
+    font-size: 40px;
+    margin-left: 1%;
+    opacity: 1;
+    transition: opacity 200ms ease 0s;
+}
+.clicked {
+    opacity: 1;
+}
+
+.flags-levels-completed{
+    border: 5px solid red !important;
+    border-top:hidden !important;
+    width:70%;
+    margin-top:100px;
+    border-radius:50px;
+ 
+}

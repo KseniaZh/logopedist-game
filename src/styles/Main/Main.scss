@@ -1,0 +1,21 @@
+﻿
+main {
+    z-index: $z-index-main;
+    display: flex;
+    position: absolute;
+    top: 7.5%;
+    left: 0;
+
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    background: $background-main;
+    padding-bottom:5%;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    user-select: none;
+
+}
