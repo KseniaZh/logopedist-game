@@ -1,17 +1,3924 @@
-import {
+﻿import {
+    BUTTON_CLICK,
 } from "./types";
 
 const initialState = {
-    'k': {
-        'block_1': 0,
-        'block_2': 0,
-        'block_3': 0,
-        'block_4': 0,
-        'block_5': 0,
-        'block_6': 0,
-        'levelEnd': 0
-    }
-            };
+    "Б": [
+            //LevelBlock 0
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 1
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 2
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 3
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 4
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 5
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+        ],
+    "В": [
+            //LevelBlock 0
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 1
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 2
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 3
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 4
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 5
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+        ],
+    "Г": [
+            //LevelBlock 0
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 1
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 2
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 3
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 4
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 5
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+        ],
+    "Д": [
+            //LevelBlock 0
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 1
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 2
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 3
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 4
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 5
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+        ],
+    "Ж": [
+            //LevelBlock 0
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 1
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 2
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 3
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 4
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 5
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+        ],
+    "З": [
+            //LevelBlock 0
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 1
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 2
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 3
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 4
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 5
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+        ],
+    "К": [
+            //LevelBlock 0
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 1
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 2
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 3
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 4
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 5
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+        ],
+    "Л": [
+            //LevelBlock 0
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 1
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 2
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 3
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 4
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 5
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+        ],
+    "М": [
+            //LevelBlock 0
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 1
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 2
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 3
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 4
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 5
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+        ],
+    "Н": [
+            //LevelBlock 0
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 1
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 2
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 3
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 4
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 5
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+        ],
+    "П": [
+            //LevelBlock 0
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 1
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 2
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 3
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 4
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+            //LevelBlock 5
+            [
+                //ButtonBlocks
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+                {
+                    'button_1': false,
+                    'button_2': false,
+                    'button_3': false,
+                },
+            ],
+        ],
+    "Р": [
+        //LevelBlock 0
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 1
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 2
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 3
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 4
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 5
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+    ],
+    "С": [
+        //LevelBlock 0
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 1
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 2
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 3
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 4
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 5
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+    ],
+    "Т": [
+        //LevelBlock 0
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 1
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 2
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 3
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 4
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 5
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+    ],
+    "Ф": [
+        //LevelBlock 0
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 1
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 2
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 3
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 4
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 5
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+    ],
+    "Ц": [
+        //LevelBlock 0
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 1
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 2
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 3
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 4
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 5
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+    ],
+    "Ч": [
+        //LevelBlock 0
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 1
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 2
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 3
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 4
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 5
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+    ],
+    "Ш": [
+        //LevelBlock 0
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 1
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 2
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 3
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 4
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 5
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+    ],
+    "Щ": [
+        //LevelBlock 0
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 1
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 2
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 3
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 4
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+        //LevelBlock 5
+        [
+            //ButtonBlocks
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+            {
+                'button_1': false,
+                'button_2': false,
+                'button_3': false,
+            },
+        ],
+    ],
+
+ };
 
 
 
@@ -19,11 +3926,9 @@ const stateLevelCompleted = (state = initialState, action) => {
 
     switch (action.type) {
 
-        //case FLAG_OPEN_COMPARE_WINDOW:
-        //    return {
-        //        ...state,
-        //        flagOpenCompareWindow: action.payload
-        //    };
+        case BUTTON_CLICK:
+            return action.payload;
+
         default:
             return state;
     }

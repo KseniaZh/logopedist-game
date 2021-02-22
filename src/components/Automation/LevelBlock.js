@@ -1,99 +1,87 @@
-﻿import React, { useEffect, useState } from 'react';
-import { connect, useDispatch, useSelector } from "react-redux";
+﻿import React, { useState } from 'react';
+import { connect, useSelector } from "react-redux";
 
 import ButtonBlock from './ButtonBlock';
+import CoinFinalLevelBlock from '../../UserInterface/Coins/CoinFinalLevelBlock';
 
 function LevelBlock(props) {
-
-
-    const coin = useSelector(state => state.stateLevelCoins.letterBlocks[props.numberLevelBlock]);
-    const stateLettersRedux = useSelector(state => state.stateLettersBlocks[props.numberLevelBlock]);
-
-    const [stateLetters, setStateLetters] = useState(stateLettersRedux);
-
-    const [letter, setLetter] = useState(0);
-
+    
     const [levelСompleted, setLevelCompleted] = useState([false, false, false, false, false, false])
 
-    const hendlerButtonBlock = (data, numberBlock) => {
-        console.log('back ', data) 
-        if (data === true) {
-            let flagArr = [...levelСompleted];
-            flagArr[numberBlock] = true;
-            setLevelCompleted(flagArr);
+    const hendlerButtonBlock = ( numberBlock) => {
+        //console.log('back ', data) 
+        //if (data === true) {
+        //    let flagArr = [...levelСompleted];
+        //    flagArr[numberBlock] = true;
+        //    setLevelCompleted(flagArr);
             
-            if (flagArr.every(x => x === true) === true) {
-                console.log('level completed ', true);
-
-            }
-        }
+        //    if (flagArr.every(x => x === true) === true) {
+        //        console.log('level completed ', true);
+        //    }
+        //}
     }
-
-    useEffect(() => {
-        let state = stateLettersRedux;
-        // меняем переменную 'X' в state на переданную через props.letterAutomation букву
-        for (let i = 0; i < state.length; i++) {
-
-            let arr = Object.values(state[i]);
-
-            for (let obj of arr) {
-
-                let keys = Object.keys(obj);
-
-                for (let key of keys) {
-                    if (obj[key] === 'X') {
-                        obj[key] = props.letterAutomation;
-                    };
-                };
-            };
-        };
-        setStateLetters(state);
-    }, [props.letterAutomation]);
 
     return (
 
             <div>
                 <ButtonBlock
-                    namesLettersButtons={stateLetters[0]}
-                    classname={stateLetters[6]}
-                    hendlerButtonBlock={hendlerButtonBlock}
-                    numberBlock={0}
-                    coin={coin}
+                namesLettersButtons={props.stateLetters[0]}
+                classname={props.stateLetters[6]}
+                numberBlock={0}
+                coin={props.coin}
+                onclick={props.onclick}
+                buttonBlockFlags={props.letterBlockFlags[0]}
+
                 />
                 <ButtonBlock
-                    namesLettersButtons={stateLetters[1]}
-                    classname={stateLetters[6]}
-                    hendlerButtonBlock={hendlerButtonBlock}
+                    namesLettersButtons={props.stateLetters[1]}
+                    classname={props.stateLetters[6]}
                     numberBlock={1}
-                    coin={coin}
+                    coin={props.coin}
+                onclick={props.onclick}
+                buttonBlockFlags={props.letterBlockFlags[1]}
+
                 />
                 <ButtonBlock
-                    namesLettersButtons={stateLetters[2]}
-                    classname={stateLetters[6]}
-                    hendlerButtonBlock={hendlerButtonBlock}
+                    namesLettersButtons={props.stateLetters[2]}
+                    classname={props.stateLetters[6]}
                     numberBlock={2}
-                    coin={coin}
+                    coin={props.coin}
+                onclick={props.onclick}
+                buttonBlockFlags={props.letterBlockFlags[2]}
+
                 />
                 <ButtonBlock
-                    namesLettersButtons={stateLetters[3]}
-                    classname={stateLetters[6]}
-                    hendlerButtonBlock={hendlerButtonBlock}
+                    namesLettersButtons={props.stateLetters[3]}
+                    classname={props.stateLetters[6]}
                     numberBlock={3}
-                    coin={coin}
+                    coin={props.coin}
+                onclick={props.onclick}
+                buttonBlockFlags={props.letterBlockFlags[3]}
+
                 />
                 <ButtonBlock
-                    namesLettersButtons={stateLetters[4]}
-                    classname={stateLetters[6]}
-                    hendlerButtonBlock={hendlerButtonBlock}
+                    namesLettersButtons={props.stateLetters[4]}
+                    classname={props.stateLetters[6]}
                     numberBlock={4}
-                    coin={coin}
+                    coin={props.coin}
+                onclick={props.onclick}
+                buttonBlockFlags={props.letterBlockFlags[4]}
+
                 />
                 <ButtonBlock
-                    namesLettersButtons={stateLetters[5]}
-                    classname={stateLetters[6]}
-                    hendlerButtonBlock={hendlerButtonBlock}
+                    namesLettersButtons={props.stateLetters[5]}
+                    classname={props.stateLetters[6]}
                     numberBlock={5}
-                    coin={coin}
+                    coin={props.coin}
+                onclick={props.onclick}
+                buttonBlockFlags={props.letterBlockFlags[5]}
+
+                />
+                <CoinFinalLevelBlock
+                    classname='coin-final-level-block-wrapper'
+                    classnameFinalCoin='coin-final-level-block'
+                    coin={props.coin}
                 />
 
             </div>

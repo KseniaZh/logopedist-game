@@ -22,7 +22,7 @@ function Header(props) {
         },
         {
             to: '/automation',
-            name: 'Тренажер автоматизации звуков'
+            name: 'Автоматизация звуков в слогах'
         }
     ]
 

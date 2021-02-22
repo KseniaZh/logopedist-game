@@ -1,15 +1,23 @@
-import React from 'react';
+﻿import React from 'react';
 
 
 function ButtonAutomationBlock(props) {
-    const data = props.number;
-    
+    const numberButton = props.number;
+    const numberButtonBlock = props.numberBlock;
+
+    const hendler = () => {
+        props.onclick(numberButton, numberButtonBlock);
+        let idDiv = document.getElementById(numberButton);
+        idDiv.nextElementSibling.classList.add('clicked')
+    }
+
     return(
 
             <div 
                 className={props.classname.classnameButton}
-                onClick={() => props.onclick(data)}
-                tabIndex = {props.tabindex}
+                onClick={() => props.onclick(numberButton, numberButtonBlock)}
+                tabIndex={props.tabindex}
+                id={numberButton}
             >    
                 <span
                     className={props.classname.classnameLetter_1}

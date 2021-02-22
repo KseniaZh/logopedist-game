@@ -1,6 +1,7 @@
 ﻿import React, {useState } from 'react';
 
 import ButtonAutomationBlock from '../../UserInterface/Buttons/ButtonAutomationBlock';
+import CoinFinalLevelBlock from '../../UserInterface/Coins/CoinFinalLevelBlock';
 
 function ButtonBlock(props) {
 
@@ -9,23 +10,33 @@ function ButtonBlock(props) {
         'button_2': ['heart'],
         'button_3': ['heart'],
     })
+    const [flagCoinFinal, setFlagCoinFinal] = useState(false);
 
-    const hendlerButtonClick = (data) => {
+    const hendlerButtonClick = (numberButton, numberButtonBlock) => {
         let newClass = {
             ...classnameSpan,
-            [data]: ['heart', 'clicked'],
+            [numberButton]: ['heart', 'clicked'],
         }
         setClassnameSpan(newClass);
 
-        newClass = Object.values(newClass); //определяем, все ли 3 кнопки кликнуты
-        //для этого собираем все значения в массив массивов и проверяем, у всех ли есть слик
+        props.onclick(numberButton, numberButtonBlock);
 
-        if (newClass.every(x => x[1] === 'clicked') === true) {
-            props.hendlerButtonBlock(newClass.every(x => x[1] === 'clicked'), props.numberBlock); // если все 3 кликнуты, выдаст true
-        // возвращаем значение наверх для подсчета прохождения уровня
+        //newClass = Object.values(newClass); //определяем, все ли 3 кнопки кликнуты
+        ////для этого собираем все значения в массив массивов и проверяем, у всех ли есть слик
+
+        //if (newClass.every(x => x[1] === 'clicked') === true) {
+        //  //  props.hendlerButtonBlock(newClass.every(x => x[1] === 'clicked'), props.numberBlock); // если все 3 кликнуты, выдаст true
+        //// возвращаем значение наверх для подсчета прохождения уровня
+        //    setFlagCoinFinal(true);
+        //}
+    }
+
+    const funcCNSpan = (numberButton) => {
+        const arrClassName = ['heart'];
+        if (props.buttonBlockFlags[numberButton] === true) {
+            arrClassName.push('clicked');
         }
-
-        
+        return arrClassName.join(' ')
     }
 
     return (
@@ -36,10 +47,11 @@ function ButtonBlock(props) {
                     onclick={hendlerButtonClick}
                     names={props.namesLettersButtons.namesLettersButton_1}
                     number='button_1'
+                    numberBlock={props.numberBlock}
             />
 
             <span
-                className={classnameSpan.button_1.join(' ')}
+                className={ funcCNSpan('button_1') }
             >	
                 🢚
             </span>
@@ -49,10 +61,11 @@ function ButtonBlock(props) {
                     onclick={hendlerButtonClick}
                     names={props.namesLettersButtons.namesLettersButton_2}
                     number='button_2'
+                    numberBlock={props.numberBlock}
             />
 
             <span
-                className={classnameSpan.button_2.join(' ')}
+                className={ funcCNSpan('button_2')}
             >	
                 🢚
             </span>
@@ -62,13 +75,25 @@ function ButtonBlock(props) {
                     onclick={hendlerButtonClick}
                     names={props.namesLettersButtons.namesLettersButton_3}
                     number='button_3'
+                    numberBlock={props.numberBlock}
             />
 
             <span
-                className={classnameSpan.button_3.join(' ')}
+                className={ funcCNSpan('button_3')}
             >
-                {props.coin}
+                🢚
             </span>
+
+            {
+                flagCoinFinal ?
+                     <CoinFinalLevelBlock
+                        classname='coin-final-block-wrapper'
+                        classnameFinalCoin='coin-final-block'
+                        coin={props.coin}
+                    />
+                    : <div className='coin-final-block-wrapper'></div>
+            }
+            
 
         </div>
 

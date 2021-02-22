@@ -1,13 +1,16 @@
-//import {
-//    EMPLOY_DESCRIPTION_ALL
+﻿import {
+    BUTTON_CLICK,
 
-//} from "./types";
+} from "./types";
 
-//export const employDescriptionAll = (data) => {
-//    //��������� 
-//    return {
-//        type: EMPLOY_DESCRIPTION_ALL,
-//        payload: data
-//    }
-//}
+export const changeFlagButtonClick = (arrLevelCompleted, letter, levelBlock, buttonBlocks, numberButton) => {
+    //клик по кнопке со слогом помечает как true
+    let arr = arrLevelCompleted;
+    arr[letter][levelBlock][buttonBlocks][numberButton] = true;
+
+    return {
+        type: BUTTON_CLICK,
+        payload: arr
+    }
+}
 

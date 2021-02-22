@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\containers",
+    "\\src\\containers\\Automation",
+    "\\src\\store",
+    "\\src\\store\\Coins",
+    "\\src\\store\\LettersBlocks",
+    "\\src\\store\\LevelCompleted",
+    "\\src\\UserInterface",
+    "\\src\\UserInterface\\Coins"
+  ],
+  "SelectedNode": "\\src\\styles\\Automation\\ButtonLetter.scss",
+  "PreviewInSolutionExplorer": false
+}

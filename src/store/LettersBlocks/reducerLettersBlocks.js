@@ -1,4 +1,6 @@
 ﻿import {
+    CHANGE_LETTERS_BLOCKS,
+    SOURCE_STATE_LETTERS_BLOCKS,
 } from "./types";
 
 const initialState = [
@@ -244,11 +246,12 @@ const stateLettersBlocks = (state = initialState, action) => {
 
     switch (action.type) {
 
-        //case FLAG_OPEN_COMPARE_WINDOW:
-        //    return {
-        //        ...state,
-        //        flagOpenCompareWindow: action.payload
-        //    };
+        case CHANGE_LETTERS_BLOCKS:
+            return action.payload;
+
+        case SOURCE_STATE_LETTERS_BLOCKS:
+            return action.payload;
+
         default:
             return state;
     }
