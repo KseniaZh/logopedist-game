@@ -10,7 +10,6 @@ function ButtonBlock(props) {
         'button_2': ['heart'],
         'button_3': ['heart'],
     })
-    const [flagCoinFinal, setFlagCoinFinal] = useState(false);
 
     const hendlerButtonClick = (numberButton, numberButtonBlock) => {
         let newClass = {
@@ -18,17 +17,7 @@ function ButtonBlock(props) {
             [numberButton]: ['heart', 'clicked'],
         }
         setClassnameSpan(newClass);
-
         props.onclick(numberButton, numberButtonBlock);
-
-        //newClass = Object.values(newClass); //определяем, все ли 3 кнопки кликнуты
-        ////для этого собираем все значения в массив массивов и проверяем, у всех ли есть слик
-
-        //if (newClass.every(x => x[1] === 'clicked') === true) {
-        //  //  props.hendlerButtonBlock(newClass.every(x => x[1] === 'clicked'), props.numberBlock); // если все 3 кликнуты, выдаст true
-        //// возвращаем значение наверх для подсчета прохождения уровня
-        //    setFlagCoinFinal(true);
-        //}
     }
 
     const funcCNSpan = (numberButton) => {
@@ -38,6 +27,9 @@ function ButtonBlock(props) {
         }
         return arrClassName.join(' ')
     }
+
+    console.log('flag completed ', props.buttonBlockCompleted + ' ' + props.numberBlock)
+
 
     return (
         <div className="button-block">
@@ -85,13 +77,13 @@ function ButtonBlock(props) {
             </span>
 
             {
-                flagCoinFinal ?
-                     <CoinFinalLevelBlock
+                props.buttonBlockCompleted ?
+                    <CoinFinalLevelBlock
                         classname='coin-final-block-wrapper'
                         classnameFinalCoin='coin-final-block'
                         coin={props.coin}
                     />
-                    : <div className='coin-final-block-wrapper'></div>
+                    :<div className='coin-final-block-wrapper'></div>
             }
             
 

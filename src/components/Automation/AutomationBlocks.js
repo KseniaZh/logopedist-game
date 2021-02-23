@@ -10,7 +10,16 @@ import {
 } from '../../store/LettersBlocks/actionsLettersBlocks';
 import {
     changeFlagButtonClick
-} from '../../store/LevelCompleted/actionsLevelCompl';
+} from '../../store/LevelCompleted/actionsLevelCompl'; 
+import {
+    changeFlagButtonBlockCompleted
+} from '../../store/LevelCompleted/actionsButtonBlockFinal';
+import {
+    changeFlagLevelCompleted
+} from '../../store/LevelCompleted/actionsLevelFinal';
+import {
+    finalLetter
+} from '../../store/LevelCompleted/actionsFinalLetter';
 
 function AutomationBlocks(props) {
 
@@ -18,18 +27,13 @@ function AutomationBlocks(props) {
 
     const letterSelect = useSelector(state => state.stateLetters.letterSelect);
     const namesLevelBlock = useSelector(state => state.stateLevelCoins.letterBlocks);
-    const levelsComplied = useSelector(state => state.stateLevelFinal[letterSelect]);
-    const stateLevelCompleted = useSelector(state => state.stateLevelCompleted);
+    const stateLevelCompleted = useSelector(state => state.stateLevelCompleted);//флаги всех кнопок ButtonBlocks
+    const stateLevelFinal = useSelector(state => state.stateLevelFinal); //флаги пройденных блоков в листе
+    const stateButtonBlockFinal = useSelector(state => state.stateButtonBlockFinal);//флаги пройденных
+    const stateFinalLetter = useSelector(state => state.stateFinalLetter); //BUTTON_LEVEL_COMPLETED
 
-    const levelSelect = (data) => {
-        for (let i = 0; i < data.length; i++) {
-            if (data[i] === false) {
-                return i
-            };
-        };
-    };
 
-    const [numberLevelBlock, setNumberLevelBlock] = useState(levelSelect(levelsComplied));
+    const [numberLevelBlock, setNumberLevelBlock] = useState(0);
 
     const coin = useSelector(state => state.stateLevelCoins.letterBlocks[numberLevelBlock]);
     const stateLetters = useSelector(state => state.stateLettersBlocks[numberLevelBlock]);
@@ -38,31 +42,34 @@ function AutomationBlocks(props) {
         setNumberLevelBlock(data);
     }
 
-    const [classnameSpan, setClassnameSpan] = useState({
-        'button_1': ['heart'],
-        'button_2': ['heart'],
-        'button_3': ['heart'],
-    })
-
     const hendlerButtonClick = (numberButton, numberButtonBlock) => {
-        //let newClass = {
-        //    ...classnameSpan,
-        //    [data]: ['heart', 'clicked'],
-        //}
-        //setClassnameSpan(newClass);
-
-        //newClass = Object.values(newClass); //определяем, все ли 3 кнопки кликнуты
-        ////для этого собираем все значения в массив массивов и проверяем, у всех ли есть слик
-
-        //if (newClass.every(x => x[1] === 'clicked') === true) {
-        //    //  props.hendlerButtonBlock(newClass.every(x => x[1] === 'clicked'), props.numberBlock); // если все 3 кликнуты, выдаст true
-        //    // возвращаем значение наверх для подсчета прохождения уровня
-        //    setFlagCoinFinal(true);
-        //}
 
         dispatch(changeFlagButtonClick(stateLevelCompleted, letterSelect, numberLevelBlock, numberButtonBlock, numberButton));
+        //получаем массив значений флагов из выбранного ButtonBlocks
+        let arrFlags = Object.values(stateLevelCompleted[letterSelect][numberLevelBlock][numberButtonBlock]);
+        // если все флаги чекнуты
+        console.log('arrFlags ', arrFlags)
+        if (arrFlags.every(x => x === true) === true) {
 
-    }
+            dispatch(changeFlagButtonBlockCompleted(stateButtonBlockFinal, letterSelect, numberLevelBlock, numberButtonBlock));
+
+            //теперь проверяем, чекнуты ли все блоки букв уровня
+            let arr = stateButtonBlockFinal[letterSelect][numberLevelBlock].filter(x => x === false);
+
+            // если все блоки пройдены, значит уровень пройден, помечаем в подсчете пройденных уровней
+            if (arr.length === 0) {
+                dispatch(changeFlagLevelCompleted(stateLevelFinal, letterSelect, numberLevelBlock));
+
+                //проверяем, чекнуты ли все уровни
+                let arrCompleted = stateLevelFinal[letterSelect].filter(x => x === false);
+
+                if (arrCompleted.length === 0) {
+                    console.log('буква пройдена')
+                    dispatch(finalLetter(stateFinalLetter, letterSelect));
+                };
+            };
+        };
+    };
 
     useEffect(() => {
         return () => {
@@ -79,7 +86,7 @@ function AutomationBlocks(props) {
                 <SelectingLevelBlock
                     namesLevelBlock={namesLevelBlock}
                     onclick={hendlerSelectLevelBlock}
-                    levelsComplied={levelsComplied}
+                    levelsComplied={stateLevelFinal[letterSelect]}
                 />
             </div>
 
@@ -90,6 +97,7 @@ function AutomationBlocks(props) {
                 stateLetters={stateLetters}
                 onclick={hendlerButtonClick}
                 letterBlockFlags={stateLevelCompleted[letterSelect][numberLevelBlock]}
+                buttonBlockCompleted={stateButtonBlockFinal[letterSelect][numberLevelBlock]}
             />
 
             <FlagsLevelsСompleted />

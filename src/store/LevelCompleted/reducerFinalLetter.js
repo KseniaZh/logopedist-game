@@ -1,4 +1,5 @@
 ﻿import {
+    FLAG_FINAL_LETTER
 } from "./types";
 
 const initialState = {
@@ -28,11 +29,9 @@ const initialState = {
 
     switch (action.type) {
 
-        //case FLAG_OPEN_COMPARE_WINDOW:
-        //    return {
-        //        ...state,
-        //        flagOpenCompareWindow: action.payload
-        //    };
+        case FLAG_FINAL_LETTER:
+            return action.payload
+
         default:
             return state;
     }

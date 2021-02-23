@@ -1,4 +1,5 @@
 ﻿import {
+    BUTTON_LEVEL_COMPLETED,
 } from "./types";
 
 const initialState = {
@@ -28,11 +29,9 @@ const stateLevelFinal = (state = initialState, action) => {
 
     switch (action.type) {
 
-        //case FLAG_OPEN_COMPARE_WINDOW:
-        //    return {
-        //        ...state,
-        //        flagOpenCompareWindow: action.payload
-        //    };
+        case BUTTON_LEVEL_COMPLETED:
+            return action.payload
+
         default:
             return state;
     }

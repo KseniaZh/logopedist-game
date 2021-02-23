@@ -7,6 +7,7 @@ import stateLevelCoins from './Coins/reducerLevelCoins';
 import stateLettersBlocks from './LettersBlocks/reducerLettersBlocks';
 import stateLetters from './LettersBlocks/reducerLetters';
 import stateFinalLetter from './LevelCompleted/reducerFinalLetter';
+import stateButtonBlockFinal from './LevelCompleted/reducerButtonBlockFinal';
 
 
 const rootReducer = combineReducers({
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
     stateLettersBlocks,
     stateLetters,
     stateFinalLetter,
+    stateButtonBlockFinal
 })
 
 export default rootReducer

@@ -5,21 +5,7 @@ import ButtonBlock from './ButtonBlock';
 import CoinFinalLevelBlock from '../../UserInterface/Coins/CoinFinalLevelBlock';
 
 function LevelBlock(props) {
-    
-    const [levelСompleted, setLevelCompleted] = useState([false, false, false, false, false, false])
 
-    const hendlerButtonBlock = ( numberBlock) => {
-        //console.log('back ', data) 
-        //if (data === true) {
-        //    let flagArr = [...levelСompleted];
-        //    flagArr[numberBlock] = true;
-        //    setLevelCompleted(flagArr);
-            
-        //    if (flagArr.every(x => x === true) === true) {
-        //        console.log('level completed ', true);
-        //    }
-        //}
-    }
 
     return (
 
@@ -31,6 +17,7 @@ function LevelBlock(props) {
                 coin={props.coin}
                 onclick={props.onclick}
                 buttonBlockFlags={props.letterBlockFlags[0]}
+                buttonBlockCompleted={props.buttonBlockCompleted[0]}
 
                 />
                 <ButtonBlock
@@ -40,6 +27,7 @@ function LevelBlock(props) {
                     coin={props.coin}
                 onclick={props.onclick}
                 buttonBlockFlags={props.letterBlockFlags[1]}
+                buttonBlockCompleted={props.buttonBlockCompleted[1]}
 
                 />
                 <ButtonBlock
@@ -49,6 +37,7 @@ function LevelBlock(props) {
                     coin={props.coin}
                 onclick={props.onclick}
                 buttonBlockFlags={props.letterBlockFlags[2]}
+                buttonBlockCompleted={props.buttonBlockCompleted[2]}
 
                 />
                 <ButtonBlock
@@ -58,6 +47,7 @@ function LevelBlock(props) {
                     coin={props.coin}
                 onclick={props.onclick}
                 buttonBlockFlags={props.letterBlockFlags[3]}
+                buttonBlockCompleted={props.buttonBlockCompleted[3]}
 
                 />
                 <ButtonBlock
@@ -67,6 +57,7 @@ function LevelBlock(props) {
                     coin={props.coin}
                 onclick={props.onclick}
                 buttonBlockFlags={props.letterBlockFlags[4]}
+                buttonBlockCompleted={props.buttonBlockCompleted[4]}
 
                 />
                 <ButtonBlock
@@ -76,6 +67,7 @@ function LevelBlock(props) {
                     coin={props.coin}
                 onclick={props.onclick}
                 buttonBlockFlags={props.letterBlockFlags[5]}
+                buttonBlockCompleted={props.buttonBlockCompleted[5]}
 
                 />
                 <CoinFinalLevelBlock
