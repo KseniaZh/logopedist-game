@@ -1,5 +1,7 @@
 ﻿import {
     BUTTON_CLICK,
+    LEVEL_REPEAT,
+    TAKE_PRIZE_NULL_ALL_BUTTON_CLICK
 } from "./types";
 
 const initialState = {
@@ -3927,6 +3929,12 @@ const stateLevelCompleted = (state = initialState, action) => {
     switch (action.type) {
 
         case BUTTON_CLICK:
+            return action.payload;
+
+        case LEVEL_REPEAT:
+            return action.payload;
+
+        case TAKE_PRIZE_NULL_ALL_BUTTON_CLICK:
             return action.payload;
 
         default:

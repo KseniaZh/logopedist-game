@@ -1,23 +1,37 @@
-﻿import React, { useState } from 'react';
-import { connect, useSelector } from "react-redux";
+﻿import React, { useEffect} from 'react';
+import { connect, useDispatch, useSelector } from "react-redux";
 
 import ButtonBlock from './ButtonBlock';
 import CoinFinalLevelBlock from '../../UserInterface/Coins/CoinFinalLevelBlock';
+import {
+    dataFromLocalStorage
+} from '../../store/LevelCompleted/actionsButtonBlockFinal';
 
 function LevelBlock(props) {
 
+    // console.log('111', typeof(JSON.parse(localStorage.getItem('Eva_stateButtonBlockFinal'))))
+    //console.log('111', typeof(localStorage.getItem('Eva_stateButtonBlockFinal')))
+
+
+    //console.log('obj ', x)
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(dataFromLocalStorage());
+    }, [])
 
     return (
 
-            <div>
+        <div>
                 <ButtonBlock
-                namesLettersButtons={props.stateLetters[0]}
-                classname={props.stateLetters[6]}
-                numberBlock={0}
-                coin={props.coin}
-                onclick={props.onclick}
-                buttonBlockFlags={props.letterBlockFlags[0]}
-                buttonBlockCompleted={props.buttonBlockCompleted[0]}
+                    namesLettersButtons={props.stateLetters[0]}
+                    classname={props.stateLetters[6]}
+                    numberBlock={0}
+                    coin={props.coin}
+                    onclick={props.onclick}
+                    buttonBlockFlags={props.letterBlockFlags[0]}
+                    buttonBlockCompleted={props.buttonBlockCompleted[0]}
 
                 />
                 <ButtonBlock
@@ -25,9 +39,9 @@ function LevelBlock(props) {
                     classname={props.stateLetters[6]}
                     numberBlock={1}
                     coin={props.coin}
-                onclick={props.onclick}
-                buttonBlockFlags={props.letterBlockFlags[1]}
-                buttonBlockCompleted={props.buttonBlockCompleted[1]}
+                    onclick={props.onclick}
+                    buttonBlockFlags={props.letterBlockFlags[1]}
+                    buttonBlockCompleted={props.buttonBlockCompleted[1]}
 
                 />
                 <ButtonBlock
@@ -35,9 +49,9 @@ function LevelBlock(props) {
                     classname={props.stateLetters[6]}
                     numberBlock={2}
                     coin={props.coin}
-                onclick={props.onclick}
-                buttonBlockFlags={props.letterBlockFlags[2]}
-                buttonBlockCompleted={props.buttonBlockCompleted[2]}
+                    onclick={props.onclick}
+                    buttonBlockFlags={props.letterBlockFlags[2]}
+                    buttonBlockCompleted={props.buttonBlockCompleted[2]}
 
                 />
                 <ButtonBlock
@@ -45,9 +59,9 @@ function LevelBlock(props) {
                     classname={props.stateLetters[6]}
                     numberBlock={3}
                     coin={props.coin}
-                onclick={props.onclick}
-                buttonBlockFlags={props.letterBlockFlags[3]}
-                buttonBlockCompleted={props.buttonBlockCompleted[3]}
+                    onclick={props.onclick}
+                    buttonBlockFlags={props.letterBlockFlags[3]}
+                    buttonBlockCompleted={props.buttonBlockCompleted[3]}
 
                 />
                 <ButtonBlock
@@ -55,9 +69,9 @@ function LevelBlock(props) {
                     classname={props.stateLetters[6]}
                     numberBlock={4}
                     coin={props.coin}
-                onclick={props.onclick}
-                buttonBlockFlags={props.letterBlockFlags[4]}
-                buttonBlockCompleted={props.buttonBlockCompleted[4]}
+                    onclick={props.onclick}
+                    buttonBlockFlags={props.letterBlockFlags[4]}
+                    buttonBlockCompleted={props.buttonBlockCompleted[4]}
 
                 />
                 <ButtonBlock
@@ -65,15 +79,10 @@ function LevelBlock(props) {
                     classname={props.stateLetters[6]}
                     numberBlock={5}
                     coin={props.coin}
-                onclick={props.onclick}
-                buttonBlockFlags={props.letterBlockFlags[5]}
-                buttonBlockCompleted={props.buttonBlockCompleted[5]}
+                    onclick={props.onclick}
+                    buttonBlockFlags={props.letterBlockFlags[5]}
+                    buttonBlockCompleted={props.buttonBlockCompleted[5]}
 
-                />
-                <CoinFinalLevelBlock
-                    classname='coin-final-level-block-wrapper'
-                    classnameFinalCoin='coin-final-level-block'
-                    coin={props.coin}
                 />
 
             </div>

@@ -6,6 +6,54 @@
     opacity: .3;
     transition: opacity 200ms ease 0s;
 }
+.one{
+    color: deeppink;
+}
+.two {
+    color:red;
+}
+.three {
+    color:gold;
+}
+.four {
+    color:magenta;
+}
+.five {
+    color:aqua;
+}
+.six {
+    color:blue;
+}
+.seven {
+    color:purple;
+}
+.eight {
+    color:blue;
+}
+.nine {
+    color:deeppink;
+}
+.ten{
+    color:green;
+}
+.eleven{
+    color:dodgerblue;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten,
+.eleven {
+    font-size: 40px;
+}
+
 .clicked {
     opacity: 1;
 }

@@ -5,9 +5,8 @@ import TypesLetters from './TypesLetters';
 import AutomationButtonsBlocks from '../../containers/Automation/AutomationButtonsBlocks';
 
 
+function Automation(props) {
 
-
-function Automation (props){
 
     return(
 

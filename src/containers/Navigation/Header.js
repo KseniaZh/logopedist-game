@@ -1,8 +1,8 @@
 ﻿import React, { useState } from 'react';
-import { connect, useDispatch, useSelector } from "react-redux";
+import { connect, useSelector } from "react-redux";
 
 import NavigationConsole from '../../UserInterface/NavigationConsole';
-import WindowBlind from '../../UserInterface/WindowBlind';
+import WindowBlind from '../../components/Header/WindowBlind';
 
 
 function Header(props) {
@@ -13,16 +13,20 @@ function Header(props) {
             name: 'Home'
         },
         {
-            to: '/products',
-            name: 'Products'
-         },
-         {
-             to: '/productsAbout',
-             name: 'ProductsAbout'
+            to: '/prizeShop',
+            name: 'Выбор награды'
+        },
+        {
+            to: '/progress',
+            name: 'Прогресс'
         },
         {
             to: '/automation',
             name: 'Автоматизация звуков в слогах'
+        },
+        {
+            to: '/wordsAutomation',
+            name: 'Автоматизация звуков в словах'
         }
     ]
 
@@ -41,6 +45,15 @@ function Header(props) {
         setIsOpen(true);
     }
 
+    const stateFinalLetter = useSelector(state => state.stateFinalLetter);
+    const LevelEndLetter = useSelector(state => state.stateLevelEnd['letter']);//флаг не полученной медали
+    const LevelEndWord = useSelector(state => state.stateLevelEnd['word']);//флаг не полученной медали
+
+    const arrLettersLevelEndLetter = Object.keys(LevelEndLetter); //массив букв
+    const arrFlagsLevelEndLetter = Object.values(LevelEndLetter); //массив флагов
+
+    const arrLettersLevelEndWord = Object.keys(LevelEndWord); //массив букв
+    const arrFlagsLevelEndWord = Object.values(LevelEndWord); //массив флагов
 
     return (
         <header>
@@ -54,6 +67,30 @@ function Header(props) {
                     stateNavigationConsole={stateNavigationConsole}
                     onclick={()=>console.log('click Header NavigationConsole')}
                 />
+                <div>
+                    {
+                        arrFlagsLevelEndLetter.map((flag, index) => {
+                            if (flag === true) {
+                                return <div
+                                    key={index + 'letter'}
+                                >
+                                    Поздравляют! Буква {arrLettersLevelEndLetter[index]} побеждена! Выбери награду!!!
+                                </div>
+                            }
+                        })
+                    }
+                    {
+                        arrFlagsLevelEndWord.map((flag, index) => {
+                            if (flag === true) {
+                                return <div
+                                    key={index + 'word'}
+                                >
+                                    Поздравляют! Буква {arrLettersLevelEndWord[index]} побеждена! Выбери награду!!!
+                                </div>
+                            }
+                        })
+                    }
+                </div>
                
                 
             </nav>
@@ -63,6 +100,7 @@ function Header(props) {
                     <WindowBlind
                         onclick={hendlerNavHide}
                         classname='NavigationWindowBlind'
+                        finalLetter={stateFinalLetter}
                     />
                     : null
             }

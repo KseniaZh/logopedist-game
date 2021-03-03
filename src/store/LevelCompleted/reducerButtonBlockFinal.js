@@ -1,5 +1,8 @@
 ﻿import {
     BUTTON_BLOCK_COMPLETED,
+    BUTTON_BLOCK_LOCAL_STORAGE,
+    TAKE_PRIZE_NULL_ALL_FLAGS_LETTER
+
 } from "./types";
 
 const initialState = {
@@ -163,6 +166,12 @@ const stateButtonBlockFinal = (state = initialState, action) => {
     switch (action.type) {
 
         case BUTTON_BLOCK_COMPLETED:
+            return action.payload
+
+        case BUTTON_BLOCK_LOCAL_STORAGE:
+            return action.payload
+
+        case TAKE_PRIZE_NULL_ALL_FLAGS_LETTER:
             return action.payload
 
         default:

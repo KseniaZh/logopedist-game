@@ -7,10 +7,9 @@ function CoinFinalLevelBlock(props) {
 
             <div 
                 className= {props.classname}
-                onClick={() => props.onclick()}
             >    
                 <span
-                    className={props.classnameFinalCoin}
+                    className={props.classnameCoin}
                 >
                     {props.coin}
                 </span>

@@ -10,29 +10,35 @@ function SelectingLevelBlock(props) {
 
         <div>
             {
-                props.namesLevelBlock.map((nameLevel, index) => {
-                    return<div key={index}>
+                props.numbersLevelBlock.map((numberLevel, index) => {
+                    return <div key={index}>
 
-                        <Button
-                            classname=''
-                            onclick={props.onclick}
-                            name={index+1}
-                            data={index}
-                        />
-                        {
-                            props.levelsComplied[index] ?
-                                <CoinFinalLevelBlock
-                                    classname=''
-                                    classnameFinalCoin=''
-                                    coin={nameLevel}
-                                />
-                                : <div className=''></div>
-                        }
+                            <Button
+                                classname=''
+                                onclick={props.onclick}
+                                name={index+1}
+                                data={index}
+                            />
+                            {
+                                props.levelsComplied[index] ?
+                                    <CoinFinalLevelBlock
+                                        classname=''
+                                        classnameFinalCoin=''
+                                        coin={props.coins[index][0]}
+                                        classnameCoin={props.coins[index][1]}
+                                    />
+                                    : <div className=''></div>
+                            }
                         
-                    </div>
+                        </div>
 
                 })
-            }               
+            }  
+            <Button
+                classname=''
+                onclick={props.onclickStartAgain}
+                name="НА-ЧАТЬ  ЗА-НО-ВО"
+            />
             </div>
         
      )

@@ -7,7 +7,7 @@
 export const changeLettersBlocks = (data, letter) => {
     //изменения блоков слогов после выбора рабочей буквы
 
-    let stateLettersBlocks = data;
+    let stateLettersBlocks = [...data];
     // меняем переменную 'X' в state на переданную через props.letterAutomation букву
     
     for (let k = 0; k < stateLettersBlocks.length; k++) {
@@ -27,8 +27,6 @@ export const changeLettersBlocks = (data, letter) => {
                 };
             };
     }
-    
-
 
     return {
         type: CHANGE_LETTERS_BLOCKS,

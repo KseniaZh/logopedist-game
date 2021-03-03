@@ -6,9 +6,9 @@ import CoinFinalLevelBlock from '../../UserInterface/Coins/CoinFinalLevelBlock';
 function ButtonBlock(props) {
 
     const [classnameSpan, setClassnameSpan] = useState({
-        'button_1': ['heart'],
-        'button_2': ['heart'],
-        'button_3': ['heart'],
+        'button_1': [props.coin[1]],
+        'button_2': [props.coin[1]],
+        'button_3': [props.coin[1]],
     })
 
     const hendlerButtonClick = (numberButton, numberButtonBlock) => {
@@ -27,9 +27,6 @@ function ButtonBlock(props) {
         }
         return arrClassName.join(' ')
     }
-
-    console.log('flag completed ', props.buttonBlockCompleted + ' ' + props.numberBlock)
-
 
     return (
         <div className="button-block">
@@ -77,11 +74,11 @@ function ButtonBlock(props) {
             </span>
 
             {
-                props.buttonBlockCompleted ?
+                props.buttonBlockCompleted === true?
                     <CoinFinalLevelBlock
                         classname='coin-final-block-wrapper'
-                        classnameFinalCoin='coin-final-block'
-                        coin={props.coin}
+                        classnameCoin={props.coin[1]}
+                        coin={props.coin[0]}
                     />
                     :<div className='coin-final-block-wrapper'></div>
             }

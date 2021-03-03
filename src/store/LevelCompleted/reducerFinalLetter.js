@@ -1,10 +1,11 @@
 ﻿import {
-    FLAG_FINAL_LETTER
+    FLAG_FINAL_LETTER,
+    TAKE_PRIZE_FLAG_NULL
 } from "./types";
 
 const initialState = {
-    "Б": false,
-    "В": false,
+    "Б": true,
+    "В": true,
     "Г": false,
     "Д": false,
     "Ж": false,
@@ -30,6 +31,9 @@ const initialState = {
     switch (action.type) {
 
         case FLAG_FINAL_LETTER:
+            return action.payload
+
+        case TAKE_PRIZE_FLAG_NULL:
             return action.payload
 
         default:

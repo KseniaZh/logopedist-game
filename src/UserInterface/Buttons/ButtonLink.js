@@ -3,29 +3,30 @@ import { NavLink } from 'react-router-dom';
 
 function ButtonLink(props) {
 
-    const data = props.data;
+    const data1 = props.data1
+    const data2 = props.data2;
     
     return(
-           
-            <div 
-                className={props.classname}
-                onClick={() => props.onclick(data)}
-                tabIndex={props.tabindex}
-            >
-                <NavLink 
-                    to={props.to}
-                    className={props.classnameButtonLink}
-                    > 
+        <>
+            <NavLink
+                to={props.to}
+                className={props.classnameButtonLink}
+            > 
+                <div 
+                    className={props.classname}
+                    onClick={() => props.onclick(data1, data2)}
+                    tabIndex={props.tabindex}
+                    style={{ backgroundImage: `url(${props.nameImage})`}}
+                >
                     <span
                         className={props.icon}
                         aria-hidden="true"
                     >
                         {props.name}
                     </span>
-                      
-
-                </NavLink>
-            </div>
+                </div>
+            </NavLink>
+        </>
     )
 }
 

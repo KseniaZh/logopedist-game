@@ -1,0 +1,17 @@
+﻿
+.prize-shop {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
+    > div {
+        border: 3px solid blue;
+        display: flex;
+        flex-direction: row;
+
+        > div {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
