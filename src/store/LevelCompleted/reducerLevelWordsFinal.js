@@ -1,6 +1,8 @@
 ﻿import {
     LEVEL_WORD_COMPLETED,
     LEVEL_WORD_REPEAT,
+    TAKE_PRIZE_ALL_LEVELS_WORD_NULL,
+    BEGIN_AGAIN_ALL_LEVELS_ALL_LETTERS_WORDS_NULL
 } from "./types";
 
 const initialState = {
@@ -34,6 +36,12 @@ const stateLevelWordsFinal = (state = initialState, action) => {
             return action.payload
 
         case LEVEL_WORD_REPEAT:
+            return action.payload
+
+        case TAKE_PRIZE_ALL_LEVELS_WORD_NULL:
+            return action.payload
+
+        case BEGIN_AGAIN_ALL_LEVELS_ALL_LETTERS_WORDS_NULL:
             return action.payload
 
         default:

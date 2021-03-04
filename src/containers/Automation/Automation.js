@@ -2,7 +2,7 @@
 import { Switch, Route } from 'react-router-dom';
 
 import TypesLetters from './TypesLetters';
-import AutomationButtonsBlocks from '../../containers/Automation/AutomationButtonsBlocks';
+import AutomationButtonsBlocks from './AutomationButtonsBlocks';
 
 
 function Automation(props) {

@@ -1,7 +1,8 @@
 ﻿import {
     BUTTON_LEVEL_COMPLETED,
     BUTTON_LEVEL_REPEAT,
-    TAKE_PRIZE_ALL_LEVELS_NULL
+    TAKE_PRIZE_ALL_LEVELS_NULL,
+    BEGIN_AGAIN_ALL_LETTERS_LEVELS_NULL
 
 } from "./types";
 
@@ -39,6 +40,9 @@ const stateLevelFinal = (state = initialState, action) => {
             return action.payload
 
         case TAKE_PRIZE_ALL_LEVELS_NULL:
+            return action.payload
+
+        case BEGIN_AGAIN_ALL_LETTERS_LEVELS_NULL:
             return action.payload
 
         default:

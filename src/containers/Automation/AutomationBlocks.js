@@ -40,20 +40,25 @@ function AutomationBlocks(props) {
 
     const dispatch = useDispatch();
 
-    const letterSelect = useSelector(state => state.stateLetters.letterSelect);
-    const namesLevelBlock = useSelector(state => state.stateLevelCoins.letterBlocks);
+    const letterSelect = useSelector(state => state.stateLetters.letterSelect); //выбрана буква
+    const namesLevelBlock = useSelector(state => state.stateLevelCoins.letterBlocks); //массив наград и их классов
+    const stateLetters = useSelector(state => state.stateLettersBlocks); //схема прорисовки карточек слогов
+
+    //переменные флагов карточек слогов
     const stateLevelCompleted = useSelector(state => state.stateLevelCompleted);//флаги всех кнопок ButtonBlocks
-    const stateLevelFinal = useSelector(state => state.stateLevelFinal); //флаги пройденных блоков в листе
+    const stateLevelFinal = useSelector(state => state.stateLevelFinal); //флаги пройденных блоков в уровне
     const stateButtonBlockFinal = useSelector(state => state.stateButtonBlockFinal);//флаги уровней в букве
-    const stateFinalLetter = useSelector(state => state.stateFinalLetter); //буква пройдена
+    const stateFinalLetter = useSelector(state => state.stateFinalLetter); //флаг буква пройдена
+
+    //награды
     const stateLevelEnd = useSelector(state => state.stateLevelEnd); //флаги не полученных наград за окончание уровня
     const boxCoinsLetter = useSelector(state => state.stateLevelCoins.boxCoinsLetter) // массив наград в банке за все уровни
-
-    const [numberLevelBlock, setNumberLevelBlock] = useState(0);
-
     const coins = useSelector(state => state.stateLevelCoins.letterBlocks);
-    const stateLetters = useSelector(state => state.stateLettersBlocks);
 
+
+    const [numberLevelBlock, setNumberLevelBlock] = useState(0); // выбран уровень   
+
+    //выбор уровня
     const hendlerSelectLevelBlock = (data) => {
         setNumberLevelBlock(data);
     }
@@ -92,7 +97,10 @@ function AutomationBlocks(props) {
         };
     };
 
+    
     const hendlerLevelRepeat = () => {
+    //повторить прохождение уровня. флаги обнуляются, награды сохраняются в банке
+
         //удаляем из подсчета пройденных уровней
         dispatch(nullFlagLevelCompleted(stateLevelFinal, letterSelect, numberLevelBlock));
 

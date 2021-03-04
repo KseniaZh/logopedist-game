@@ -4,16 +4,19 @@ import { connect, useDispatch, useSelector } from "react-redux";
 import BoxCoinsLevelCompleted from '../../components/Completed/BoxCoinsLevelCompleted';
 import SelectingLevelBlock from '../../UserInterface/SelectingLevelBlock';
 import LevelBlockWord from '../../components/WordsAutomation/LevelBlockWord';
+import FinaleTakePrize from '../../components/Completed/FinaleTakePrize';
 
 import {
     sourceStateLettersBlocks,
 } from '../../store/LettersBlocks/actionsLettersBlocks';
 import {
     changeFlagLevelWordCompleted,
-    nullFlagLevelWordCompleted
+    nullFlagLevelWordCompleted,
+    takePrizeAllFlagsLevelsWordsNull
 } from '../../store/LevelCompleted/actionsLevelWordsFinal';
 import {
     finalLetterWords,
+    takePrizeFlagFinalWordsNull
 } from '../../store/LevelCompleted/actionsFinalLetterWords';
 import {
     boxCoinsDeposit
@@ -23,15 +26,16 @@ function WordBlocks(props) {
 
     const dispatch = useDispatch();
 
-    const letterSelect = useSelector(state => state.stateLetters.letterSelect);
-    const namesLevelBlock = useSelector(state => state.stateLevelCoins.wordsBlocks);
+    const letterSelect = useSelector(state => state.stateLetters.letterSelect); //выбрана буква
+    const stateWords = useSelector(state => state.stateWords); //массивы слов для вывода в уровни
+    const boxCoinsLetter = useSelector(state => state.stateLevelCoins.boxCoinsLetter) // банка с наградами
+    const coins = useSelector(state => state.stateLevelCoins.wordsBlocks); // массив со значками наград
+
     const stateLevelWordsFinal = useSelector(state => state.stateLevelWordsFinal); //флаги прохождения уровней в букве
-    const stateWords = useSelector(state => state.stateWords);
-    const boxCoinsLetter = useSelector(state => state.stateLevelCoins.boxCoinsLetter)
-    
-    const stateFinalLetterWords = useSelector(state => state.stateFinalLetterWords);// флаги по всем буквам по учету прохождения всех уровней
-    
-    const [numberWordBlock, setNumberWordBlock] = useState(0);
+    const stateFinalLetterWords = useSelector(state => state.stateFinalLetterWords);// флаги прохождения буквы
+
+
+    const [numberWordBlock, setNumberWordBlock] = useState(0); // номер уровня
     
     const [counter, setCounter] = useState(0);//счетчик переключиния слов, в массиве 10 слов
 
@@ -39,10 +43,6 @@ function WordBlocks(props) {
         setNumberWordBlock(data);
         setCounter(0);
     };
-    const coins = useSelector(state => state.stateLevelCoins.wordsBlocks);
-
-
- 
     const hendlerClickWord = (numberWord) => {
         setCounter(numberWord);
         if (numberWord === 10) {
@@ -58,11 +58,21 @@ function WordBlocks(props) {
                 console.log(' УРОВЕНЬ ПРОЙДЕН!!!')
             }
         }
-    }
+    };
     const hendlerLevelWordsRepeat = () => {
         setCounter(0); // 1 слово
         //снимаем флаг прохождения уровня
         dispatch(nullFlagLevelWordCompleted(stateLevelWordsFinal, letterSelect, numberWordBlock));
+    };
+    const hendlerFinaleWordsTakePrize = () => {
+        // буква пройдена, при получении приза все флаги буквы меняем на false для возможности повторного прохождения буквы
+
+        //флаг прохождения буквы возвращаем на false
+        dispatch(takePrizeFlagFinalWordsNull(stateFinalLetterWords, letterSelect));
+
+        // флаги прохождения уровней буквы возвращаем на false
+        dispatch(takePrizeAllFlagsLevelsWordsNull(stateLevelWordsFinal, letterSelect));
+
     }
 
     useEffect(() => {
@@ -80,8 +90,8 @@ function WordBlocks(props) {
 
                 <SelectingLevelBlock
                     numbersLevelBlock={Object.keys(stateWords[letterSelect])}
-                    namesLevels={namesLevelBlock}
                     onclick={hendlerSelectWordBlock}
+                    onclickStartAgain={hendlerFinaleWordsTakePrize}
                     levelsComplied={stateLevelWordsFinal[letterSelect]}
                     coins={coins}
                 />
@@ -99,6 +109,13 @@ function WordBlocks(props) {
             <BoxCoinsLevelCompleted
                 boxCoinsLetter={boxCoinsLetter[letterSelect]}
             />
+            {
+                stateFinalLetterWords[letterSelect] === true ?
+                    <FinaleTakePrize
+                        onclick={hendlerFinaleWordsTakePrize}
+                    />
+                    : null
+            }
                
         </div>
         

@@ -2,14 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components",
-    "\\src\\components\\Automation",
-    "\\src\\components\\Completed",
-    "\\src\\components\\Shop",
-    "\\src\\components\\WordsAutomation",
+    "\\src\\containers",
+    "\\src\\containers\\Automation",
+    "\\src\\containers\\Navigation",
     "\\src\\store",
-    "\\src\\store\\Coins",
-    "\\src\\store\\LettersBlocks"
+    "\\src\\store\\LettersBlocks",
+    "\\src\\store\\LevelCompleted",
+    "\\src\\UserInterface",
+    "\\src\\UserInterface\\Buttons"
   ],
+  "SelectedNode": "\\src\\UserInterface\\SelectingLevelBlock.js",
   "PreviewInSolutionExplorer": false
 }

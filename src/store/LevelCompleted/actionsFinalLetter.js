@@ -1,6 +1,7 @@
 ﻿import {
     FLAG_FINAL_LETTER,
-    TAKE_PRIZE_FLAG_NULL
+    TAKE_PRIZE_FLAG_NULL,
+    BEGIN_AGAIN_ALL_LETTERS
 
 } from "./types";
 
@@ -27,6 +28,37 @@ export const takePrizeFlagFinalLetterNull = (stateFinalLetter, letter) => {
 
     return {
         type: TAKE_PRIZE_FLAG_NULL,
+        payload: obj
+    }
+}
+
+export const beginAgainAllFlagsFinalLetterNull = () => {
+    //сброс всех уровней
+    // все, кроме наград, возвращается к исходному состоянию
+
+    let obj = {
+        "Б": false,
+        "В": false,
+        "Г": false,
+        "Д": false,
+        "Ж": false,
+        "З": false,
+        "К": false,
+        "Л": false,
+        "М": false,
+        "Н": false,
+        "П": false,
+        "Р": false,
+        "С": false,
+        "Т": false,
+        "Ф": false,
+        "Ц": false,
+        "Ч": false,
+        "Ш": false,
+        "Щ": false,
+    };
+    return {
+        type: BEGIN_AGAIN_ALL_LETTERS,
         payload: obj
     }
 }

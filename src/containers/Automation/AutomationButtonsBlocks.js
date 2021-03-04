@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import { connect, useSelector } from "react-redux";
 
-import AutomationBlocks from "../../components/Automation/AutomationBlocks";
+import AutomationBlocks from "./AutomationBlocks";
 import TypesLetters from "./TypesLetters";
 
 

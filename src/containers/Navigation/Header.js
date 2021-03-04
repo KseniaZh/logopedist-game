@@ -1,9 +1,16 @@
 ﻿import React, { useState } from 'react';
-import { connect, useSelector } from "react-redux";
+import { connect, useDispatch, useSelector } from "react-redux";
 
 import NavigationConsole from '../../UserInterface/NavigationConsole';
 import WindowBlind from '../../components/Header/WindowBlind';
+import Button from '../../UserInterface/Buttons/Button';
 
+import { beginAgainAllFlagsFinalLetterNull } from '../../store/LevelCompleted/actionsFinalLetter';
+import { beginAgainAllFlagsAllLevelsNull } from '../../store/LevelCompleted/actionsLevelFinal';
+import { beginAgainNullAllFlagsAllBlocksAllLetters } from '../../store/LevelCompleted/actionsButtonBlockFinal';
+import { beginAgainNullAllFlagsAllButtonClick } from '../../store/LevelCompleted/actionsLevelCompl';
+import { beginAgainAllFlagsFinalLetterWordsNull } from '../../store/LevelCompleted/actionsFinalLetterWords';
+import { beginAgainAllLevelsWordsNull } from '../../store/LevelCompleted/actionsLevelWordsFinal';
 
 function Header(props) {
 
@@ -31,7 +38,6 @@ function Header(props) {
     ]
 
     const [isOpen, setIsOpen] = useState(false);
-
     const navStyle = ['Navigation'];
 
     if (!isOpen) {
@@ -45,15 +51,43 @@ function Header(props) {
         setIsOpen(true);
     }
 
-    const stateFinalLetter = useSelector(state => state.stateFinalLetter);
-    const LevelEndLetter = useSelector(state => state.stateLevelEnd['letter']);//флаг не полученной медали
-    const LevelEndWord = useSelector(state => state.stateLevelEnd['word']);//флаг не полученной медали
+    const dispatch = useDispatch();
 
-    const arrLettersLevelEndLetter = Object.keys(LevelEndLetter); //массив букв
-    const arrFlagsLevelEndLetter = Object.values(LevelEndLetter); //массив флагов
+    //переменные флагов карточек слогов
+    const stateLevelCompleted = useSelector(state => state.stateLevelCompleted);//флаги всех кнопок ButtonBlocks
+    const stateLevelFinal = useSelector(state => state.stateLevelFinal); //флаги пройденных блоков в уровне
+    const stateButtonBlockFinal = useSelector(state => state.stateButtonBlockFinal);//флаги уровней в букве
+    const stateFinalLetter = useSelector(state => state.stateFinalLetter); //флаг буква пройдена
 
-    const arrLettersLevelEndWord = Object.keys(LevelEndWord); //массив букв
-    const arrFlagsLevelEndWord = Object.values(LevelEndWord); //массив флагов
+    //переменные флагов уровней слов
+    const stateLevelWordsFinal = useSelector(state => state.stateLevelWordsFinal); //флаги прохождения уровней в букве
+    const stateFinalLetterWords = useSelector(state => state.stateFinalLetterWords);// флаги прохождения буквы
+
+    const hendlerBeginAgainNullAllFlags = () => {
+        //сброс всех уровней. Все, кроме наград, возвращается к исходному состоянию
+
+       // СЛОГИ
+
+        //флаг прохождения букв
+        dispatch(beginAgainAllFlagsFinalLetterNull());
+
+        //уровни всех буквы меняем на false
+        dispatch(beginAgainAllFlagsAllLevelsNull());
+
+        // false флаги во всех блоках на всех уровнях
+        dispatch(beginAgainNullAllFlagsAllBlocksAllLetters());
+
+        //false все клики по кнопкам во всех карточках
+        dispatch(beginAgainNullAllFlagsAllButtonClick());
+
+        // СЛОВА
+
+        //флаг прохождения букв
+        dispatch(beginAgainAllFlagsFinalLetterWordsNull());
+
+        // флаги прохождения уровней буквы возвращаем на false
+        dispatch(beginAgainAllLevelsWordsNull());
+    }
 
     return (
         <header>
@@ -67,33 +101,14 @@ function Header(props) {
                     stateNavigationConsole={stateNavigationConsole}
                     onclick={()=>console.log('click Header NavigationConsole')}
                 />
-                <div>
-                    {
-                        arrFlagsLevelEndLetter.map((flag, index) => {
-                            if (flag === true) {
-                                return <div
-                                    key={index + 'letter'}
-                                >
-                                    Поздравляют! Буква {arrLettersLevelEndLetter[index]} побеждена! Выбери награду!!!
-                                </div>
-                            }
-                        })
-                    }
-                    {
-                        arrFlagsLevelEndWord.map((flag, index) => {
-                            if (flag === true) {
-                                return <div
-                                    key={index + 'word'}
-                                >
-                                    Поздравляют! Буква {arrLettersLevelEndWord[index]} побеждена! Выбери награду!!!
-                                </div>
-                            }
-                        })
-                    }
-                </div>
-               
+                <Button
+                    classname='null-all-letters-begin-again'
+                    onclick={hendlerBeginAgainNullAllFlags}
+                    name="ВСЕ БУК-ВЫ СНА-ЧА-ЛА"
+                />
                 
             </nav>
+
 
             {
                 isOpen ?

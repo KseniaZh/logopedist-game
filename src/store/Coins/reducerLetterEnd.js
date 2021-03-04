@@ -4,7 +4,7 @@
 
 const initialState = {
     'letter': {
-    "Б": true,
+    "Б": false,
     "В": false,
     "Г": false,
     "Д": false,
@@ -25,7 +25,7 @@ const initialState = {
     "Щ": false,
     },
     'word': {
-        "Б": true,
+        "Б": false,
         "В": false,
         "Г": false,
         "Д": false,

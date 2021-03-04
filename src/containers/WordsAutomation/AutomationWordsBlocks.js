@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import { connect, useSelector } from "react-redux";
 
-import WordBlocks from "../../components/WordsAutomation/WordBlocks";
+import WordBlocks from "./WordBlocks";
 import TypesLettersWords from "./TypesLettersWords";
 
 

@@ -1,11 +1,12 @@
 ﻿import {
     FLAG_FINAL_LETTER,
-    TAKE_PRIZE_FLAG_NULL
+    TAKE_PRIZE_FLAG_NULL,
+    BEGIN_AGAIN_ALL_LETTERS
 } from "./types";
 
 const initialState = {
-    "Б": true,
-    "В": true,
+    "Б": false,
+    "В": false,
     "Г": false,
     "Д": false,
     "Ж": false,
@@ -34,6 +35,9 @@ const initialState = {
             return action.payload
 
         case TAKE_PRIZE_FLAG_NULL:
+            return action.payload
+
+        case BEGIN_AGAIN_ALL_LETTERS:
             return action.payload
 
         default:

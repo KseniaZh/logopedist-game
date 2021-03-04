@@ -1,8 +1,8 @@
 ﻿import {
     BUTTON_BLOCK_COMPLETED,
     BUTTON_BLOCK_LOCAL_STORAGE,
-    TAKE_PRIZE_NULL_ALL_FLAGS_LETTER
-
+    TAKE_PRIZE_NULL_ALL_FLAGS_LETTER,
+    BEGIN_AGAIN_NULL_ALL_FLAGS_ALL_LETTERS
 } from "./types";
 
 const initialState = {
@@ -172,6 +172,9 @@ const stateButtonBlockFinal = (state = initialState, action) => {
             return action.payload
 
         case TAKE_PRIZE_NULL_ALL_FLAGS_LETTER:
+            return action.payload
+
+        case BEGIN_AGAIN_NULL_ALL_FLAGS_ALL_LETTERS:
             return action.payload
 
         default:
