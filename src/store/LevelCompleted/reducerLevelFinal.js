@@ -2,7 +2,8 @@
     BUTTON_LEVEL_COMPLETED,
     BUTTON_LEVEL_REPEAT,
     TAKE_PRIZE_ALL_LEVELS_NULL,
-    BEGIN_AGAIN_ALL_LETTERS_LEVELS_NULL
+    BEGIN_AGAIN_ALL_LETTERS_LEVELS_NULL,
+    LOAD_FROM_LOCAL_STORAGE_FINAL_LEVEL
 
 } from "./types";
 
@@ -43,6 +44,9 @@ const stateLevelFinal = (state = initialState, action) => {
             return action.payload
 
         case BEGIN_AGAIN_ALL_LETTERS_LEVELS_NULL:
+            return action.payload
+
+        case LOAD_FROM_LOCAL_STORAGE_FINAL_LEVEL:
             return action.payload
 
         default:

@@ -2,7 +2,8 @@
     LEVEL_WORD_COMPLETED,
     LEVEL_WORD_REPEAT,
     TAKE_PRIZE_ALL_LEVELS_WORD_NULL,
-    BEGIN_AGAIN_ALL_LEVELS_ALL_LETTERS_WORDS_NULL
+    BEGIN_AGAIN_ALL_LEVELS_ALL_LETTERS_WORDS_NULL,
+    LOAD_FROM_LOCAL_STORAGE_LEVEL_WORD_COMPLETED
 } from "./types";
 
 export const changeFlagLevelWordCompleted = (stateLevelWordFinal, letter, numberWordBlock) => {
@@ -12,6 +13,8 @@ export const changeFlagLevelWordCompleted = (stateLevelWordFinal, letter, number
     let obj = { ...stateLevelWordFinal };
 
     obj[letter][numberWordBlock] = true;
+
+    localStorage[`${JSON.parse(localStorage['player'])}_finalLevelWords`] = JSON.stringify(obj);
 
     return {
         type: LEVEL_WORD_COMPLETED,
@@ -25,6 +28,8 @@ export const nullFlagLevelWordCompleted = (stateLevelWordFinal, letter, numberWo
     let obj = { ...stateLevelWordFinal };
 
     obj[letter][numberWordBlock] = false;
+
+    localStorage[`${JSON.parse(localStorage['player'])}_finalLevelWords`] = JSON.stringify(obj);
 
     return {
         type: LEVEL_WORD_REPEAT,
@@ -41,6 +46,8 @@ export const takePrizeAllFlagsLevelsWordsNull = (stateLevelWordFinal, letter) =>
     obj[letter] = obj[letter].map(flag => {
         return flag = false
     })
+
+    localStorage[`${JSON.parse(localStorage['player'])}_finalLevelWords`] = JSON.stringify(obj);
 
     return {
         type: TAKE_PRIZE_ALL_LEVELS_WORD_NULL,
@@ -73,8 +80,19 @@ export const beginAgainAllLevelsWordsNull = () => {
         "Щ": [false, false, false,],
     };
 
+    localStorage[`${JSON.parse(localStorage['player'])}_finalLevelWords`] = JSON.stringify(obj);
+
     return {
         type: BEGIN_AGAIN_ALL_LEVELS_ALL_LETTERS_WORDS_NULL,
         payload: obj
+    }
+}
+
+export const loadLocalStorageLevelWordsCompleted = (data) => {
+    //при входе в игру загружаем из localStorage 
+
+    return {
+        type: LOAD_FROM_LOCAL_STORAGE_LEVEL_WORD_COMPLETED,
+        payload: data
     }
 }

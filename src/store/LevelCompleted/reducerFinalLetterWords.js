@@ -1,7 +1,8 @@
 ﻿import {
     FLAG_FINAL_LETTER_WORDS,
     TAKE_PRIZE_FLAG_LETTER_WORDS_NULL,
-    BEGIN_AGAIN_ALL_LETTERS_WORDS_NULL
+    BEGIN_AGAIN_ALL_LETTERS_WORDS_NULL,
+    LOAD_FROM_LOCAL_STORAGE_FINAL_LETTER_WORDS
 } from "./types";
 
 const initialState = {
@@ -38,6 +39,9 @@ const stateFinalLetterWords = (state = initialState, action) => {
             return action.payload
 
         case BEGIN_AGAIN_ALL_LETTERS_WORDS_NULL:
+            return action.payload
+
+        case LOAD_FROM_LOCAL_STORAGE_FINAL_LETTER_WORDS:
             return action.payload
 
         default:

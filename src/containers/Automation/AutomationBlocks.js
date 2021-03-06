@@ -35,6 +35,7 @@ import {
 import {
     boxCoinsDeposit
 } from '../../store/Coins/actionsLevelCoins';
+import { flagGetPrizeInShop } from '../../store/Coins/actionsLevelCoins';
 
 function AutomationBlocks(props) {
 
@@ -91,7 +92,8 @@ function AutomationBlocks(props) {
                 if (arrCompleted.length === 0) {
                     console.log('буква пройдена')
                     dispatch(finalLetter(stateFinalLetter, letterSelect));
-                    dispatch(flagLevelLetterEnd('letter', stateLevelEnd, letterSelect));
+                    dispatch(flagLevelLetterEnd(stateLevelEnd, letterSelect));
+                    dispatch(flagGetPrizeInShop(true)); //право на получение награды в магазине призов
                 };
             };
         };

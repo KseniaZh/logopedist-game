@@ -1,8 +1,12 @@
 ﻿import {
-    BOX_COINS_DEPOSIT
+    BOX_COINS_DEPOSIT,
+    LOAD_FROM_LOCAL_STORAGE_BOX_COINS,
+    FLAG_GET_PRIZE,
+    LOAD_FROM_LOCAL_STORAGE_GET_PRIZE
 } from "./types";
 
 const initialState = {
+    flagGetPrize: false,
     letterBlocks: [
         [`❤`, 'one'],
         ['❀', 'two'],
@@ -58,6 +62,21 @@ const stateLevelCoins = (state = initialState, action) => {
             return {
                 ...state,
                 boxCoinsLetter: action.payload
+            };
+        case LOAD_FROM_LOCAL_STORAGE_BOX_COINS:
+            return {
+                ...state,
+                boxCoinsLetter: action.payload
+            };
+        case FLAG_GET_PRIZE:
+            return {
+                ...state,
+                flagGetPrize: action.payload
+            };
+        case LOAD_FROM_LOCAL_STORAGE_GET_PRIZE:
+            return {
+                ...state,
+                flagGetPrize: action.payload
             };
         default:
             return state;

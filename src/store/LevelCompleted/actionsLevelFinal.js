@@ -2,7 +2,8 @@
     BUTTON_LEVEL_COMPLETED,
     BUTTON_LEVEL_REPEAT,
     TAKE_PRIZE_ALL_LEVELS_NULL,
-    BEGIN_AGAIN_ALL_LETTERS_LEVELS_NULL
+    BEGIN_AGAIN_ALL_LETTERS_LEVELS_NULL,
+    LOAD_FROM_LOCAL_STORAGE_FINAL_LEVEL
 
 } from "./types";
 
@@ -13,6 +14,8 @@ export const changeFlagLevelCompleted = (stateLevelFinal, letter, numberLevelBlo
     let arr = { ...stateLevelFinal };
 
     arr[letter][numberLevelBlock] = true;
+
+    localStorage[`${JSON.parse(localStorage['player'])}_finalLevel`] = JSON.stringify(arr);
 
     return {
         type: BUTTON_LEVEL_COMPLETED,
@@ -29,6 +32,8 @@ export const nullFlagLevelCompleted = (stateLevelFinal, letter, numberLevelBlock
 
     arr[letter][numberLevelBlock] = false;
 
+    localStorage[`${JSON.parse(localStorage['player'])}_finalLevel`] = JSON.stringify(arr);
+
     return {
         type: BUTTON_LEVEL_REPEAT,
         payload: arr
@@ -43,6 +48,8 @@ export const takePrizeFlagsAllLevelsNull = (stateLevelFinal, letter) => {
     let arr = { ...stateLevelFinal };
 
     arr[letter] = [false, false, false, false, false, false];
+
+    localStorage[`${JSON.parse(localStorage['player'])}_finalLevel`] = JSON.stringify(arr);
 
     return {
         type: TAKE_PRIZE_ALL_LEVELS_NULL,
@@ -76,8 +83,18 @@ export const beginAgainAllFlagsAllLevelsNull = () => {
                     "Щ": [false, false, false, false, false, false],
                 };
 
+    localStorage[`${JSON.parse(localStorage['player'])}_finalLevel`] = JSON.stringify(arr);
+
     return {
         type: BEGIN_AGAIN_ALL_LETTERS_LEVELS_NULL,
         payload: arr
     }
 }
+    export const loadLocalStorageFinalLevels = (data) => {
+        //при входе в игру загружаем из localStorage 
+
+        return {
+            type: LOAD_FROM_LOCAL_STORAGE_FINAL_LEVEL,
+            payload: data
+        }
+    }

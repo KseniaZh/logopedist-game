@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import ButtonLink from '../../UserInterface/Buttons/ButtonLink';
+import Button from '../../UserInterface/Buttons/Button';
 
 
 function PrizeShopBlock(props) {
@@ -12,9 +12,9 @@ function PrizeShopBlock(props) {
             {
                     props.arrImages.map((imagePrize, index) => {
                         if (props.arrFlagsImagesShop[index] === false) {
-                            return <ButtonLink
+                            return <Button
                                         key={index}
-                                        data1={props.keyBlock}
+                                        data={props.keyBlock}
                                         data2={index}
                                         nameImage={imagePrize}
                                         classname='priz-Window-Blind'

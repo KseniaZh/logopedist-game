@@ -2,13 +2,16 @@
     BUTTON_CLICK,
     LEVEL_REPEAT,
     TAKE_PRIZE_NULL_ALL_BUTTON_CLICK,
-    BEGIN_AGAIN_ALL_NULL
+    BEGIN_AGAIN_ALL_NULL,
+    LOAD_FROM_LOCAL_STORAGE_BUTTON_CLICK
 } from "./types";
 
 export const changeFlagButtonClick = (arrLevelCompleted, letter, levelBlock, buttonBlocks, numberButton) => {
     //клик по кнопке со слогом помечает как true
     let obj = { ...arrLevelCompleted };
     obj[letter][levelBlock][buttonBlocks][numberButton] = true;
+
+    localStorage[`${JSON.parse(localStorage['player'])}_buttonClickBlockLevel`] = JSON.stringify(obj);
 
     return {
         type: BUTTON_CLICK,
@@ -49,7 +52,9 @@ export const nullAllFlagsLevelButtonClick = (arrLevelCompleted, letter, levelBlo
                                         'button_2': false,
                                         'button_3': false,
                                     },
-                                ];
+    ];
+
+    localStorage[`${JSON.parse(localStorage['player'])}_buttonClickBlockLevel`] = JSON.stringify(obj);
 
     return {
         type: LEVEL_REPEAT,
@@ -268,6 +273,8 @@ export const takePrizeNullAllFlagsButtonClick = (arrLevelCompleted, letter) => {
             },
         ],
     ];
+
+    localStorage[`${JSON.parse(localStorage['player'])}_buttonClickBlockLevel`] = JSON.stringify(obj);
 
     return {
         type: TAKE_PRIZE_NULL_ALL_BUTTON_CLICK,
@@ -4196,9 +4203,18 @@ export const beginAgainNullAllFlagsAllButtonClick = () => {
         ],
     };
 
+    localStorage[`${JSON.parse(localStorage['player'])}_buttonClickBlockLevel`] = JSON.stringify(obj);
+
     return {
         type: BEGIN_AGAIN_ALL_NULL,
         payload: obj
     }
 }
+export const loadLocalStorageButtonClickBlockLevel = (data) => {
+        //при входе в игру загружаем из localStorage 
 
+        return {
+            type: LOAD_FROM_LOCAL_STORAGE_BUTTON_CLICK,
+            payload: data
+        }
+    }

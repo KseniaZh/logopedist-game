@@ -2,7 +2,8 @@
     LEVEL_WORD_COMPLETED,
     LEVEL_WORD_REPEAT,
     TAKE_PRIZE_ALL_LEVELS_WORD_NULL,
-    BEGIN_AGAIN_ALL_LEVELS_ALL_LETTERS_WORDS_NULL
+    BEGIN_AGAIN_ALL_LEVELS_ALL_LETTERS_WORDS_NULL,
+    LOAD_FROM_LOCAL_STORAGE_LEVEL_WORD_COMPLETED
 } from "./types";
 
 const initialState = {
@@ -42,6 +43,9 @@ const stateLevelWordsFinal = (state = initialState, action) => {
             return action.payload
 
         case BEGIN_AGAIN_ALL_LEVELS_ALL_LETTERS_WORDS_NULL:
+            return action.payload
+
+        case LOAD_FROM_LOCAL_STORAGE_LEVEL_WORD_COMPLETED:
             return action.payload
 
         default:

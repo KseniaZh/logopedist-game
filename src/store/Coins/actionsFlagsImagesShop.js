@@ -1,17 +1,16 @@
-import {
+Ôªøimport {
     REMOVE_PRIZE,
+    LOAD_LOCAL_STORAGE_FLAG_SHOP_PRIZE
 } from "./types";
 
 export const removePrizeFromArr = (stateFlagsImagesShop, nameTypeImages, numberImage) => {
-    //ÔË ‚˚·ÓÂ ÔËÁ‡ ÏÂÌˇÂÏ ÙÎ‡„ Ì‡ true, ÔÓÒÎÂ ˝ÚÓ„Ó ÓÌ ÌÂ Û˜ËÚ˚‚‡ÂÚÒˇ ÔË ÔÓËÒÓ‚ÍÂ 
+    //–ø—Ä–∏ –≤—ã–±–æ—Ä–µ –ø—Ä–∏–∑–∞ –º–µ–Ω—è–µ–º —Ñ–ª–∞–≥ –Ω–∞ true, –ø–æ—Å–ª–µ —ç—Ç–æ–≥–æ –æ–Ω –Ω–µ —É—á–∏—Ç—ã–≤–∞–µ—Ç—Å—è –ø—Ä–∏ –ø—Ä–æ—Ä–∏—Å–æ–≤–∫–µ 
 
     let stateNew = { ...stateFlagsImagesShop };
 
-    console.log('nameTypeImages ', nameTypeImages)
-    console.log('numberImage ', numberImage)
-    console.log('stateNew ', stateNew)
     stateNew[nameTypeImages][numberImage] = true;
 
+    localStorage[`${JSON.parse(localStorage['player'])}_flagsImagesShop`] = JSON.stringify(stateNew);
 
     return {
         type: REMOVE_PRIZE,
@@ -19,3 +18,11 @@ export const removePrizeFromArr = (stateFlagsImagesShop, nameTypeImages, numberI
     }
 }
 
+export const loadLocalStorageFlagsShopPrize = (data) => {
+    //–ø—Ä–∏ –≤—Ö–æ–¥–µ –≤ –∏–≥—Ä—É –∑–∞–≥—Ä—É–∂–∞–µ–º –∏–∑ localStorage 
+
+    return {
+        type: LOAD_LOCAL_STORAGE_FLAG_SHOP_PRIZE,
+        payload: data
+    }
+}

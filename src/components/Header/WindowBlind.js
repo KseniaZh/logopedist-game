@@ -1,11 +1,16 @@
 ﻿import React from 'react';
+import dog_0 from '../../img/dogs/dog1.png';
 
-import everest from '../../img/dinosaur/dinosaur2.jpg';
 
 const WindowBlind = props => {
 
-    const arrLetter = Object.keys(props.finalLetter); //массив букв
-    const arrFlags = Object.values(props.finalLetter); //массив флагов
+    const arrLetter = Object.keys(props.letterProgressPrizes); //массив букв
+    const arrFlags = Object.values(props.letterProgressPrizes); //массив массивов [false, ["unicorns", 0]]
+    const stateImages = props.stateImages;
+
+    //С: [false, ["unicorns", 0]]
+
+    console.log('arrFlags ', arrFlags)
 
     return (
         <div
@@ -14,18 +19,34 @@ const WindowBlind = props => {
         >
             {
                 arrFlags.map((flag, index) => {
-                    if (flag === true) {
+                    if (flag[0] === true) {
                         return <div
                             key={index}
                             className='letters-Window-Blind'
                             
                         >
-                            {arrLetter[index]} : <div
-                                className='priz-Window-Blind'
-                                style={{
-                                    backgroundImage: `url(${everest})`
-                                }}>
-                                </div>
+                            <div>{arrLetter[index]} : </div>
+                            {
+                                flag.map((val, index) => {
+                                    if (index > 0) {
+                                        let prize = stateImages[val[0]][val[1]];
+                                        console.log('prize ', prize)
+                                        return <div
+                                                    className='priz-Window-Blind'
+                                                    style={{
+                                                        backgroundImage: `url(${prize})`
+                                                    }}
+                                                    key={index}
+                                                >
+                                                </div>
+                                    } else {
+                                        return null
+                                    }
+
+                                })
+
+                            }
+                            
                         </div>
                     }
                 })
@@ -36,4 +57,3 @@ const WindowBlind = props => {
 
 export default WindowBlind
 
-//<img src={everest} alt='логотип компании' />

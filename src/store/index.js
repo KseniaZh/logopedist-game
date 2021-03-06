@@ -14,7 +14,7 @@ import stateFlagsImagesShop from './Coins/reducerFlagsImagesShop';
 import stateWords from './LettersBlocks/reducerWords';
 import stateLevelWordsFinal from './LevelCompleted/reducerLevelWordsFinal';
 import stateFinalLetterWords from './LevelCompleted/reducerFinalLetterWords';
-
+import stateAuthorization from './Authorization/reducerAuthorization';
 
 const rootReducer = combineReducers({
     stateUrl,
@@ -30,7 +30,8 @@ const rootReducer = combineReducers({
     stateFlagsImagesShop,
     stateWords,
     stateLevelWordsFinal,
-    stateFinalLetterWords
+    stateFinalLetterWords,
+    stateAuthorization
 })
 
 export default rootReducer

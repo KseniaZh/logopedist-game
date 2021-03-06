@@ -1,5 +1,6 @@
 ﻿import React from 'react';
-
+import TypesLetters from '../../containers/Automation/TypesLetters';
+import TypesLettersWords from '../../containers/WordsAutomation/TypesLettersWords';
 
 function Hi(props) {
 
@@ -8,7 +9,12 @@ function Hi(props) {
         <div
             className={props.classname}
         >
-            Привет!
+            <div>
+                ПРИВЕТ , {props.player}!
+            </div>
+
+            <TypesLetters />
+            <TypesLettersWords />
         </div>
   
     )

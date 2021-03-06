@@ -1,25 +1,10 @@
-﻿import React, { useEffect} from 'react';
-import { connect, useDispatch, useSelector } from "react-redux";
+﻿import React from 'react';
 
 import ButtonBlock from './ButtonBlock';
-import CoinFinalLevelBlock from '../../UserInterface/Coins/CoinFinalLevelBlock';
-import {
-    dataFromLocalStorage
-} from '../../store/LevelCompleted/actionsButtonBlockFinal';
 
 function LevelBlock(props) {
 
-    // console.log('111', typeof(JSON.parse(localStorage.getItem('Eva_stateButtonBlockFinal'))))
-    //console.log('111', typeof(localStorage.getItem('Eva_stateButtonBlockFinal')))
 
-
-    //console.log('obj ', x)
-
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(dataFromLocalStorage());
-    }, [])
 
     return (
 
@@ -90,4 +75,4 @@ function LevelBlock(props) {
      )
 }
 
-export default connect()(LevelBlock)
+export default LevelBlock

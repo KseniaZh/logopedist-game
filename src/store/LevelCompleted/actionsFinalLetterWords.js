@@ -1,7 +1,8 @@
 ﻿import {
     FLAG_FINAL_LETTER_WORDS,
     TAKE_PRIZE_FLAG_LETTER_WORDS_NULL,
-    BEGIN_AGAIN_ALL_LETTERS_WORDS_NULL
+    BEGIN_AGAIN_ALL_LETTERS_WORDS_NULL,
+    LOAD_FROM_LOCAL_STORAGE_FINAL_LETTER_WORDS
 
 } from "./types";
 
@@ -11,6 +12,8 @@ export const finalLetterWords = (stateFinalLetterWords, letter) => {
     let obj = { ...stateFinalLetterWords };
 
     obj[letter] = true;
+
+    localStorage[`${JSON.parse(localStorage['player'])}_finalLetterWords`] = JSON.stringify(obj);
 
     return {
         type: FLAG_FINAL_LETTER_WORDS,
@@ -25,6 +28,8 @@ export const takePrizeFlagFinalWordsNull = (stateFinalLetterWords, letter) => {
     let obj = { ...stateFinalLetterWords };
 
     obj[letter] = false;
+
+    localStorage[`${JSON.parse(localStorage['player'])}_finalLetterWords`] = JSON.stringify(obj);
 
     return {
         type: TAKE_PRIZE_FLAG_LETTER_WORDS_NULL,
@@ -58,8 +63,19 @@ export const beginAgainAllFlagsFinalLetterWordsNull = () => {
         "Щ": false,
     };
 
+    localStorage[`${JSON.parse(localStorage['player'])}_finalLetterWords`] = JSON.stringify(obj);
+
     return {
         type: BEGIN_AGAIN_ALL_LETTERS_WORDS_NULL,
         payload: obj
+    }
+}
+
+export const loadLocalStorageFinalLetterWords = (data) => {
+    //при входе в игру загружаем из localStorage 
+
+    return {
+        type: LOAD_FROM_LOCAL_STORAGE_FINAL_LETTER_WORDS,
+        payload: data
     }
 }

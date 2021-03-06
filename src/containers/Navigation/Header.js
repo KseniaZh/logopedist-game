@@ -53,6 +53,10 @@ function Header(props) {
 
     const dispatch = useDispatch();
 
+    //набор картинок для призов
+    const stateImages = useSelector(state => state.stateImages);
+    const letterProgressPrizes = useSelector(state => state.stateLevelEnd); //прогресс букв и полученных призов
+
     //переменные флагов карточек слогов
     const stateLevelCompleted = useSelector(state => state.stateLevelCompleted);//флаги всех кнопок ButtonBlocks
     const stateLevelFinal = useSelector(state => state.stateLevelFinal); //флаги пройденных блоков в уровне
@@ -115,7 +119,8 @@ function Header(props) {
                     <WindowBlind
                         onclick={hendlerNavHide}
                         classname='NavigationWindowBlind'
-                        finalLetter={stateFinalLetter}
+                        letterProgressPrizes={letterProgressPrizes}
+                        stateImages={stateImages}
                     />
                     : null
             }

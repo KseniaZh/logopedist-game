@@ -2,7 +2,8 @@
     BUTTON_CLICK,
     LEVEL_REPEAT,
     TAKE_PRIZE_NULL_ALL_BUTTON_CLICK,
-    BEGIN_AGAIN_ALL_NULL
+    BEGIN_AGAIN_ALL_NULL,
+    LOAD_FROM_LOCAL_STORAGE_BUTTON_CLICK
 } from "./types";
 
 const initialState = {
@@ -3939,6 +3940,9 @@ const stateLevelCompleted = (state = initialState, action) => {
             return action.payload;
 
         case BEGIN_AGAIN_ALL_NULL:
+            return action.payload;
+
+        case LOAD_FROM_LOCAL_STORAGE_BUTTON_CLICK:
             return action.payload;
 
         default:

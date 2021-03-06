@@ -6,9 +6,7 @@ import SelectingLevelBlock from '../../UserInterface/SelectingLevelBlock';
 import LevelBlockWord from '../../components/WordsAutomation/LevelBlockWord';
 import FinaleTakePrize from '../../components/Completed/FinaleTakePrize';
 
-import {
-    sourceStateLettersBlocks,
-} from '../../store/LettersBlocks/actionsLettersBlocks';
+import {sourceStateLettersBlocks} from '../../store/LettersBlocks/actionsLettersBlocks';
 import {
     changeFlagLevelWordCompleted,
     nullFlagLevelWordCompleted,
@@ -18,9 +16,8 @@ import {
     finalLetterWords,
     takePrizeFlagFinalWordsNull
 } from '../../store/LevelCompleted/actionsFinalLetterWords';
-import {
-    boxCoinsDeposit
-} from '../../store/Coins/actionsLevelCoins';
+import { boxCoinsDeposit } from '../../store/Coins/actionsLevelCoins';
+import { flagGetPrizeInShop } from '../../store/Coins/actionsLevelCoins';
 
 function WordBlocks(props) {
 
@@ -64,17 +61,23 @@ function WordBlocks(props) {
         //снимаем флаг прохождения уровня
         dispatch(nullFlagLevelWordCompleted(stateLevelWordsFinal, letterSelect, numberWordBlock));
     };
-    const hendlerFinaleWordsTakePrize = () => {
-        // буква пройдена, при получении приза все флаги буквы меняем на false для возможности повторного прохождения буквы
+
+    const hendlerStartAgain = () => {
+        // сбросить достижения по букве и начать с начала
 
         //флаг прохождения буквы возвращаем на false
         dispatch(takePrizeFlagFinalWordsNull(stateFinalLetterWords, letterSelect));
 
         // флаги прохождения уровней буквы возвращаем на false
         dispatch(takePrizeAllFlagsLevelsWordsNull(stateLevelWordsFinal, letterSelect));
-
     }
+    const hendlerFinaleWordsTakePrize = () => {
+        // буква пройдена, при получении приза все флаги буквы меняем на false для возможности повторного прохождения буквы
 
+        hendlerStartAgain();
+        dispatch(flagGetPrizeInShop(true)); //право на получение награды в магазине призов
+    }
+    
     useEffect(() => {
         return () => {
             dispatch(sourceStateLettersBlocks());
@@ -91,7 +94,7 @@ function WordBlocks(props) {
                 <SelectingLevelBlock
                     numbersLevelBlock={Object.keys(stateWords[letterSelect])}
                     onclick={hendlerSelectWordBlock}
-                    onclickStartAgain={hendlerFinaleWordsTakePrize}
+                    onclickStartAgain={hendlerStartAgain}
                     levelsComplied={stateLevelWordsFinal[letterSelect]}
                     coins={coins}
                 />

@@ -1,11 +1,12 @@
 ﻿import {
     FLAG_FINAL_LETTER,
     TAKE_PRIZE_FLAG_NULL,
-    BEGIN_AGAIN_ALL_LETTERS
+    BEGIN_AGAIN_ALL_LETTERS,
+    LOAD_FROM_LOCAL_STORAGE_FINAL_LETTER
 } from "./types";
 
 const initialState = {
-    "Б": false,
+    "Б": true,
     "В": false,
     "Г": false,
     "Д": false,
@@ -38,6 +39,9 @@ const initialState = {
             return action.payload
 
         case BEGIN_AGAIN_ALL_LETTERS:
+            return action.payload
+
+        case LOAD_FROM_LOCAL_STORAGE_FINAL_LETTER:
             return action.payload
 
         default:

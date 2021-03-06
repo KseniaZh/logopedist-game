@@ -1,9 +1,9 @@
 ﻿import {
     BUTTON_BLOCK_COMPLETED,
-    BUTTON_BLOCK_LOCAL_STORAGE,
     BUTTON_BLOCK_REPEAT,
     TAKE_PRIZE_NULL_ALL_FLAGS_LETTER,
-    BEGIN_AGAIN_NULL_ALL_FLAGS_ALL_LETTERS
+    BEGIN_AGAIN_NULL_ALL_FLAGS_ALL_LETTERS,
+    LOAD_FROM_LOCAL_STORAGE_BLOCKS_LEVEL_COMPLETED
 } from "./types";
 
 export const changeFlagButtonBlockCompleted = (stateButtonBlockFinal, letter, numberLevelBlock, numberButtonBlock) => {
@@ -13,10 +13,7 @@ export const changeFlagButtonBlockCompleted = (stateButtonBlockFinal, letter, nu
 
     obj[letter][numberLevelBlock][numberButtonBlock] = true;
 
-    // localStorage.setItem('Eva_stateButtonBlockFinal', JSON.stringify(arr));
-   // console.log('setItem ', JSON.stringify(arr))
-
-    localStorage['Eva_stateButtonBlockFinal'] = JSON.stringify(obj);
+    localStorage[`${JSON.parse(localStorage['player'])}_blocksLevelCompleted`] = JSON.stringify(obj);
 
     return {
         type: BUTTON_BLOCK_COMPLETED,
@@ -24,16 +21,6 @@ export const changeFlagButtonBlockCompleted = (stateButtonBlockFinal, letter, nu
     }
 }
 
-export const dataFromLocalStorage = () => {
-    // грузим данные из localStorage
-    const data = localStorage.getItem("Eva_stateButtonBlockFinal");
-    const dataNew = JSON.parse(data)
-
-    return {
-        type: BUTTON_BLOCK_LOCAL_STORAGE,
-        payload: dataNew
-    }
-}
 export const nullAllFlagsButtonBlocksCompleted = (stateButtonBlockFinal, letter, numberLevelBlock) => {
     //все кнопки блока были кликнуты, но игрок хочет заново пройти уровень
     //меняем все флаги блока назад на false
@@ -42,10 +29,7 @@ export const nullAllFlagsButtonBlocksCompleted = (stateButtonBlockFinal, letter,
 
     obj[letter][numberLevelBlock] = [false, false, false, false, false, false];
 
-    // localStorage.setItem('Eva_stateButtonBlockFinal', JSON.stringify(arr));
-    // console.log('setItem ', JSON.stringify(arr))
-
-    localStorage['Eva_stateButtonBlockFinal'] = JSON.stringify(obj);
+    localStorage[`${JSON.parse(localStorage['player'])}_blocksLevelCompleted`] = JSON.stringify(obj);
 
     return {
         type: BUTTON_BLOCK_REPEAT,
@@ -68,10 +52,7 @@ export const takePrizeNullAllFlagsAllBlocksLetter = (stateButtonBlockFinal, lett
                     [false, false, false, false, false, false],
                 ];
 
-    // localStorage.setItem('Eva_stateButtonBlockFinal', JSON.stringify(arr));
-    // console.log('setItem ', JSON.stringify(arr))
-
-    localStorage['Eva_stateButtonBlockFinal'] = JSON.stringify(obj);
+    localStorage[`${JSON.parse(localStorage['player'])}_blocksLevelCompleted`] = JSON.stringify(obj);
 
     return {
         type: TAKE_PRIZE_NULL_ALL_FLAGS_LETTER,
@@ -237,13 +218,19 @@ export const beginAgainNullAllFlagsAllBlocksAllLetters = () => {
         ],
     };
 
-    // localStorage.setItem('Eva_stateButtonBlockFinal', JSON.stringify(arr));
-    // console.log('setItem ', JSON.stringify(arr))
-
-    localStorage['Eva_stateButtonBlockFinal'] = JSON.stringify(obj);
+    localStorage[`${JSON.parse(localStorage['player'])}_blocksLevelCompleted`] = JSON.stringify(obj);
 
     return {
         type: BEGIN_AGAIN_NULL_ALL_FLAGS_ALL_LETTERS,
         payload: obj
+    }
+}
+
+export const loadLocalStorageBlocksLevelCompleted = (data) => {
+    //при входе в игру загружаем из localStorage 
+
+    return {
+        type: LOAD_FROM_LOCAL_STORAGE_BLOCKS_LEVEL_COMPLETED,
+        payload: data
     }
 }
