@@ -20,24 +20,29 @@ function TypesLetters(props) {
         dispatch(changeLettersBlocks(stateLettersRedux, letterName));
     };
 
+    const Y = 2 * Math.PI * (1/letters.length);
+    //радиус круга
+    const radius = 57;
+
     return(
     <div>
-        <h2>Выберите букву</h2>
-        <ul>
-            {
-                    letters.map((item, index) => {
+        <div>СЛО-ГИ</div>
 
-                        if (item.type === 2) {
-                            return <li
-                                        key={index + "TypesLetters"}
-                                        onClick={() => hendlerClick(item.name)}
-                                    >
-                                        <NavLink to={`/automation/${item.type}/${item.name}/LevelBlock_1`}>{item.name}</NavLink>
-                                    </li>
-                        }
-                    })
-            }
-        </ul>
+        {
+                letters.map((item, index) => {
+
+                    if (item.type === 2) {
+                        return <div
+                            key={index + "TypesLetters"}
+                            onClick={() => hendlerClick(item.name)}
+                            style={{ left: `${40 + radius * Math.cos(index * Y) + '%'}`, top: `${40 + radius * Math.sin(index * Y) + '%'}`}}
+                        >
+                            <NavLink to={`/automation/${item.type}/${item.name}/LevelBlock_1`}>{item.name}</NavLink>
+                        </div>
+                    }
+                })
+        }
+ 
     </div>
     )
 }

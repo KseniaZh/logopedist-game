@@ -3,14 +3,15 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\Shop",
+    "\\src\\components\\Automation",
+    "\\src\\components\\Completed",
     "\\src\\containers",
-    "\\src\\containers\\Authorization",
-    "\\src\\containers\\Home",
-    "\\src\\containers\\WordsAutomation",
+    "\\src\\containers\\Automation",
+    "\\src\\store",
+    "\\src\\store\\Coins",
     "\\src\\UserInterface",
-    "\\src\\UserInterface\\Buttons"
+    "\\src\\UserInterface\\Coins"
   ],
-  "SelectedNode": "\\src\\UserInterface\\Buttons\\ButtonLink.js",
+  "SelectedNode": "\\src\\components\\Completed\\LevelCompleted.js",
   "PreviewInSolutionExplorer": false
 }

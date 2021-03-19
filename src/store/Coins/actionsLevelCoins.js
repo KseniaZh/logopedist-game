@@ -1,13 +1,14 @@
-import {
+Ôªøimport {
     BOX_COINS_DEPOSIT,
     LOAD_FROM_LOCAL_STORAGE_BOX_COINS,
     FLAG_GET_PRIZE,
-    LOAD_FROM_LOCAL_STORAGE_GET_PRIZE
+    LOAD_FROM_LOCAL_STORAGE_GET_PRIZE,
+    SELECT_IMG_PRIZE
 
 } from "./types";
 
 export const boxCoinsDeposit = (box, letter, coin) => {
-    //ÔÓÒÎÂ ÔÓıÓÊ‰ÂÌËˇ ÛÓ‚Ìˇ ‚ ·ÛÍ‚Â ‚ ÍÓÔËÎÍÛ Ô‡‰‡ÂÚ ÏÓÌÂÚÍ‡ 
+    //–ø–æ—Å–ª–µ –ø—Ä–æ—Ö–æ–∂–¥–µ–Ω–∏—è —É—Ä–æ–≤–Ω—è –≤ –±—É–∫–≤–µ –≤ –∫–æ–ø–∏–ª–∫—É –ø–∞–¥–∞–µ—Ç –º–æ–Ω–µ—Ç–∫–∞ 
 
     let boxNew = { ...box };
 
@@ -22,7 +23,7 @@ export const boxCoinsDeposit = (box, letter, coin) => {
 }
 
 export const loadLocalStorageBoxCoinsDeposit = (data) => {
-    //ÔË ‚ıÓ‰Â ‚ Ë„Û Á‡„ÛÊ‡ÂÏ ËÁ localStorage 
+    //–ø—Ä–∏ –≤—Ö–æ–¥–µ –≤ –∏–≥—Ä—É –∑–∞–≥—Ä—É–∂–∞–µ–º –∏–∑ localStorage 
     let dataLoad = { ...data };
     console.log('dataLoad ', dataLoad)
     return {
@@ -31,8 +32,8 @@ export const loadLocalStorageBoxCoinsDeposit = (data) => {
     }
 }
 export const flagGetPrizeInShop = (flag) => {
-    //ÔÓÒÎÂ ÔÓıÓÊ‰ÂÌËˇ ÛÓ‚Ìˇ Ë„ÓÍ ÔÓÎÛ˜‡ÂÚ Ô‡‚Ó Ì‡ ‚˚·Ó Ì‡„‡‰˚ ‚ Ï‡„‡ÁËÌÂ ÔËÁÓ‚
-    // ÔÓÒÎÂ ‚˚·Ó‡ Ì‡„‡‰˚ Ô‡‚Ó ËÒ˜ÂÁ‡ÂÚ
+    //–ø–æ—Å–ª–µ –ø—Ä–æ—Ö–æ–∂–¥–µ–Ω–∏—è —É—Ä–æ–≤–Ω—è –∏–≥—Ä–æ–∫ –ø–æ–ª—É—á–∞–µ—Ç –ø—Ä–∞–≤–æ –Ω–∞ –≤—ã–±–æ—Ä –Ω–∞–≥—Ä–∞–¥—ã –≤ –º–∞–≥–∞–∑–∏–Ω–µ –ø—Ä–∏–∑–æ–≤
+    // –ø–æ—Å–ª–µ –≤—ã–±–æ—Ä–∞ –Ω–∞–≥—Ä–∞–¥—ã –ø—Ä–∞–≤–æ –∏—Å—á–µ–∑–∞–µ—Ç
 
     localStorage[`${JSON.parse(localStorage['player'])}_flagGetPrize`] = JSON.stringify(flag);
 
@@ -43,10 +44,21 @@ export const flagGetPrizeInShop = (flag) => {
 }
 
 export const loadLocalStorageFlagGetPrize = (data) => {
-    //ÔË ‚ıÓ‰Â ‚ Ë„Û Á‡„ÛÊ‡ÂÏ ËÁ localStorage 
+    //–ø—Ä–∏ –≤—Ö–æ–¥–µ –≤ –∏–≥—Ä—É –∑–∞–≥—Ä—É–∂–∞–µ–º –∏–∑ localStorage 
 
     return {
         type: LOAD_FROM_LOCAL_STORAGE_GET_PRIZE,
         payload: data
+    }
+}
+
+export const selectImgPrize = (nameTypeImages, numberImage) => {
+    //–∑–∞–ø–æ–º–∏–Ω–∞–µ–º –∫–∞—Ä—Ç–∏–Ω–∫—É –≤—ã–±—Ä–∞–Ω–Ω–æ–≥–æ –ø—Ä–∏–∑–∞ –¥–ª—è –≤—ã–≤–æ–¥–∞ –≤ —Ç–∞–±–ª–∏—á–∫—É TakePrize, –∫–æ—Ç–æ—Ä–∞—è –≤—ã—Å–∫–∞–∫–∏–≤–∞–µ—Ç –ø–æ—Å–ª–µ –∫–ª–∏–∫–∞ –Ω–∞ –ø—Ä–∏–∑
+
+    let arr = [nameTypeImages, numberImage];
+
+    return {
+        type: SELECT_IMG_PRIZE,
+        payload: arr
     }
 }

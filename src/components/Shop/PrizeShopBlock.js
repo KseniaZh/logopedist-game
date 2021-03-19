@@ -5,9 +5,13 @@ import Button from '../../UserInterface/Buttons/Button';
 function PrizeShopBlock(props) {
     
     return(
-        <div className="">
+        <div>
 
-            <div>{props.nameBlock}</div>
+            <div
+                style={{ backgroundImage: `url(${props.bannersBlocks})` }}
+            >
+               
+            </div>
             <div>
             {
                     props.arrImages.map((imagePrize, index) => {
@@ -16,17 +20,18 @@ function PrizeShopBlock(props) {
                                         key={index}
                                         data={props.keyBlock}
                                         data2={index}
-                                        nameImage={imagePrize}
-                                        classname='priz-Window-Blind'
+                                        nameImage=''
+                                        classname='priz'
                                         onclick={props.onclick}
                                         to={props.to}
-
+                                        name={index + 1}
                                     />
                         }
                         return null
                 })
             }
             </div>
+            <div></div>
         </div>
 
     )

@@ -22,22 +22,31 @@ function TypesLettersWords(props) {
         dispatch(changeLettersBlocks(stateLettersRedux, letterName));
     };
 
+    const Y = 2 * Math.PI * (1 / letters.length);
+    //радиус круга
+    const radius = 57;
+
     return(
     <div>
-        <h2>Выберите букву</h2>
-        <ul>
-            {
-                letters.map((item, index) => {
+        <div>СЛО-ВА</div>
 
-                    return <li
-                                key={index + "TypesLettersWords"}
-                                onClick={() => hendlerClick(item)}
+        {
+            letters.map((item, index) => {
+
+                return <div
+                            key={index + "TypesLettersWords"}
+                            onClick={() => hendlerClick(item)}
+                            style={{ left: `${40 + radius * Math.cos(index * Y) + '%'}`, top: `${40 + radius * Math.sin(index * Y) + '%'}` }}
+                        >
+                            <NavLink
+                                to={`/wordsAutomation/${item}/${item}/LevelBlock_1`}
                             >
-                                <NavLink to={`/wordsAutomation/${item}/${item}/LevelBlock_1`}>{item}</NavLink>
-                            </li>
-                })
-            }
-        </ul>
+                                {item}
+                            </NavLink>
+                        </div>
+            })
+        }
+
     </div>
     )
 }

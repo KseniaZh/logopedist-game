@@ -33,7 +33,7 @@ export const pushPrizeLetter = (letterPrizeProgress, letter, nameTypeImages, num
     let obj = { ...letterPrizeProgress };
     let img = [nameTypeImages, numberImage];
 
-    obj[letter][0] = true;
+    obj[letter] = [true];
 
     obj[letter].push(img);
 

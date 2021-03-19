@@ -7,20 +7,20 @@ $z-index-footer: 100;
 
 /*Navigation*/
 $background-navigation: green;
-
-
+$background-button-navigation: linear-gradient(to top, rgba(247, 240, 185, 0.05), rgba(199, 183, 63, .9));
+$background-button-navigation-hover: rgba(0, 0, 0, 0.5);
 
 
 /*WindowBlind*/
-$background-window-blind: rgba(191, 117, 130, 0.53);
+$background-window-blind: rgba(116, 86, 91, 0.53);
 
 
 /*Main*/
-$background-main: pink;
+$background-main: linear-gradient(to top,  rgb(255, 247, 241),  rgb(255, 240, 227));
 
 
 /*Home*/
-$background-home: white;
+$background-home: #fffaf5;
 $background-home-block: pink;
 $background-preview-element: white;
 
@@ -31,3 +31,29 @@ $background-footer: green;
 /*Automation*/
 
 $background-automation-wrapper: white;
+
+//PrizeShop
+//$background-shop: url('../../img/imgPrizes1.jpg');
+$background-shop: linear-gradient(to top, rgba(172, 161, 77, 0.5), rgba(237, 222, 109, 0.5));
+$background-board: linear-gradient(to top, rgba(157, 130, 55, 0.99) 5%, rgba(211, 174, 52, 0.99) 60%, rgba(160, 130, 48, 0.99) 97%);
+$border-board: 1px solid rgba(172, 161, 77, 0.99);
+
+$background-priz: linear-gradient(-15deg, rgba(211, 187, 7, 0.99) 15%, rgba(255, 238, 111, 0.99) 65%, rgba(209, 190, 42, 0.99) 90%);
+
+//$background-priz-hover: linear-gradient(-5deg, rgba(211, 187, 7, 0.99) 10%, rgba(253, 230, 69, 0.99) 35%, rgba(253, 233, 84, 0.99) 40%, rgba(248, 233, 125, 0.99) 55%, rgba(244, 225, 90, 0.99) 65%, rgba(244, 218, 43, 0.99) 80%, rgba(209, 190, 42, 0.99) 99%);
+$background-priz-hover: linear-gradient(-5deg, rgba(211, 187, 7, 0.99) 10%, rgba(253, 242, 154, 0.99) 55%, rgba(209, 190, 42, 0.99) 95%);
+
+$background-priz-activ: linear-gradient(-15deg, rgba(211, 187, 7, 0.99) 10%, rgba(253, 242, 154, 0.99) 55%, rgba(209, 190, 42, 0.99) 95%);
+
+
+
+
+
+
+
+
+
+
+
+
+

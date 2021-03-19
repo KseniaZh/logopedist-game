@@ -90,8 +90,6 @@ const initialState = {
         dog_8,
         dog_9,
         dog_10,
-        dog_11,
-        dog_12,
     ],
     'dolls': [
         doll_0,

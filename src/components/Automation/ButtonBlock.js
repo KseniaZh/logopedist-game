@@ -80,7 +80,7 @@ function ButtonBlock(props) {
                         classnameCoin={props.coin[1]}
                         coin={props.coin[0]}
                     />
-                    :<div className='coin-final-block-wrapper'></div>
+                    :<span className='coin-final-block-wrapper'></span>
             }
             
 

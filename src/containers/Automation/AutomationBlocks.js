@@ -138,19 +138,14 @@ function AutomationBlocks(props) {
     return (
         <div className="automation-buttons-blocks">
 
-
-            <div>
-                Тип буквы {props.typeLetter} буква {letterSelect}
-
-                <SelectingLevelBlock
-                    numbersLevelBlock={Object.keys(stateLetters)}
-                    namesLevelBlock={namesLevelBlock}
-                    onclick={hendlerSelectLevelBlock}
-                    onclickStartAgain={hendlerFinaleLetterTakePrize}
-                    levelsComplied={stateLevelFinal[letterSelect]}
-                    coins={coins}
-                />
-            </div>
+            <SelectingLevelBlock
+                numbersLevelBlock={Object.keys(stateLetters)}
+                namesLevelBlock={namesLevelBlock}
+                onclick={hendlerSelectLevelBlock}
+                onclickStartAgain={hendlerFinaleLetterTakePrize}
+                levelsComplied={stateLevelFinal[letterSelect]}
+                coins={coins}
+            />
 
             {
                 stateLevelFinal[letterSelect][numberLevelBlock] === true ?
@@ -159,12 +154,14 @@ function AutomationBlocks(props) {
                         flagLevelFinal={stateLevelFinal[letterSelect][numberLevelBlock]}
                         onclick={hendlerLevelRepeat}
                     />
-                    :<LevelBlock
+                    : <LevelBlock
+                        letterSelect={letterSelect}
                         numberLevelBlock={numberLevelBlock}
                         namesLevelBlock={namesLevelBlock}
                         coin={coins[numberLevelBlock]}
                         stateLetters={stateLetters[numberLevelBlock]}
                         onclick={hendlerButtonClick}
+                       
                         letterBlockFlags={stateLevelCompleted[letterSelect][numberLevelBlock]}
                         buttonBlockCompleted={stateButtonBlockFinal[letterSelect][numberLevelBlock]}
                 

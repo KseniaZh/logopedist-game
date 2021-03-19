@@ -5,9 +5,9 @@ function ButtonLink(props) {
 
     const data1 = props.data1
     const data2 = props.data2;
-    
+
     return(
-        <>
+        <div>
             <NavLink
                 to={props.to}
                 className={props.classnameButtonLink}
@@ -26,7 +26,7 @@ function ButtonLink(props) {
                     </span>
                 </div>
             </NavLink>
-        </>
+        </div>
     )
 }
 

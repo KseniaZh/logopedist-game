@@ -9,10 +9,8 @@ function Hi(props) {
         <div
             className={props.classname}
         >
-            <div>
-                ПРИВЕТ , {props.player}!
-            </div>
 
+            <TypesLetters />
             <TypesLetters />
             <TypesLettersWords />
         </div>

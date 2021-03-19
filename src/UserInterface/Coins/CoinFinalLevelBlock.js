@@ -5,7 +5,7 @@ function CoinFinalLevelBlock(props) {
     
     return(
 
-            <div 
+            <span
                 className= {props.classname}
             >    
                 <span
@@ -13,7 +13,7 @@ function CoinFinalLevelBlock(props) {
                 >
                     {props.coin}
                 </span>
-            </div>
+            </span>
 
     )
 }

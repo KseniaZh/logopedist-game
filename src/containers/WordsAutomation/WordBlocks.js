@@ -85,7 +85,7 @@ function WordBlocks(props) {
     }, [])
 
     return (
-        <div className="automation-buttons-blocks">
+        <div className="automation-buttons-blocks-word">
 
 
             <div>

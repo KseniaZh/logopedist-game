@@ -2,8 +2,16 @@
     BOX_COINS_DEPOSIT,
     LOAD_FROM_LOCAL_STORAGE_BOX_COINS,
     FLAG_GET_PRIZE,
-    LOAD_FROM_LOCAL_STORAGE_GET_PRIZE
+    LOAD_FROM_LOCAL_STORAGE_GET_PRIZE,
+    SELECT_IMG_PRIZE
 } from "./types";
+
+import dinosaur_banner from '../../img/banners/dinosaur.jpg';
+import dogs_banner from '../../img/banners/schp19.jpg';
+import unicorns_banner from '../../img/banners/unicorns.jpg';
+import princess_banner from '../../img/banners/princess.jpg';
+import dolls_banner from '../../img/banners/lol.jpg';
+
 
 const initialState = {
     flagGetPrize: false,
@@ -29,6 +37,13 @@ const initialState = {
         'princess': 'Принцессы',
         'unicorns': 'Волшебные единороги',
     },
+    banners: {
+        'dinosaur': dinosaur_banner,
+        'dogs': dogs_banner,
+        'dolls': dolls_banner,
+        'princess': princess_banner,
+        'unicorns': unicorns_banner,
+    },
     boxCoinsLetter: {
         "Б": [],
         "В": [],
@@ -50,6 +65,7 @@ const initialState = {
         "Ш": [],
         "Щ": [],
     },
+    nameImageSelectedPrize: ['dolls', 0]
  };
 
 
@@ -77,6 +93,11 @@ const stateLevelCoins = (state = initialState, action) => {
             return {
                 ...state,
                 flagGetPrize: action.payload
+            };
+        case SELECT_IMG_PRIZE:
+            return {
+                ...state,
+                nameImageSelectedPrize: action.payload
             };
         default:
             return state;

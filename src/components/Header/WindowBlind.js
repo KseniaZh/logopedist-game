@@ -1,6 +1,4 @@
 ﻿import React from 'react';
-import dog_0 from '../../img/dogs/dog1.png';
-
 
 const WindowBlind = props => {
 
@@ -9,8 +7,6 @@ const WindowBlind = props => {
     const stateImages = props.stateImages;
 
     //С: [false, ["unicorns", 0]]
-
-    console.log('arrFlags ', arrFlags)
 
     return (
         <div
@@ -30,9 +26,9 @@ const WindowBlind = props => {
                                 flag.map((val, index) => {
                                     if (index > 0) {
                                         let prize = stateImages[val[0]][val[1]];
-                                        console.log('prize ', prize)
+                                     
                                         return <div
-                                                    className='priz-Window-Blind'
+                                                    className='priz-progress'
                                                     style={{
                                                         backgroundImage: `url(${prize})`
                                                     }}

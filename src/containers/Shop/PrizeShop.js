@@ -5,7 +5,12 @@ import TakePrize from '../../components/Shop/TakePrize';
 
 import { removePrizeFromArr } from '../../store/Coins/actionsFlagsImagesShop';
 import { pushPrizeLetter } from '../../store/Coins/actionsLetterEnd';
-import { flagGetPrizeInShop } from '../../store/Coins/actionsLevelCoins';
+import {
+    flagGetPrizeInShop,
+    selectImgPrize
+} from '../../store/Coins/actionsLevelCoins';
+
+
 
 function PrizeShop(props) {
 
@@ -13,31 +18,32 @@ function PrizeShop(props) {
 
     const stateImages = useSelector(state => state.stateImages); // все картинки
     const namesBlocks = Object.keys(stateImages);
-    const arrsImages = Object.values(stateImages);
+    const arrsImages = Object.values(stateImages);// массив массивов картинок
     const letterSelect = useSelector(state => state.stateLetters.letterSelect); //выбрана буква
     const letterPrizeProgress = useSelector(state => state.stateLevelEnd); //объект букв с флагами и выбранными призами
 
     const stateFlagsImagesShop = useSelector(state => state.stateFlagsImagesShop); //магазин призов
     const namesBeautiful = useSelector(state => state.stateLevelCoins.namesBlocksPrizes);
+    const bannersBlocks = useSelector(state => state.stateLevelCoins.banners);
     const flagGetPrize = useSelector(store => store.stateLevelCoins.flagGetPrize); //право на выбор награды в магазине
+    const nameImage = useSelector(store => store.stateLevelCoins.nameImageSelectedPrize); // имя img выбранного приза
 
     const [flagWarning, setFlagWarning] = useState(false);
     const [flagComponent, setFlagComponent] = useState(false);
-    const [nameImage, setNameImage] = useState(null);
 
     const hendlerSelectPrize = (nameTypeImages, numberImage) => {
         if (flagGetPrize === true) {
             dispatch(removePrizeFromArr(stateFlagsImagesShop, nameTypeImages, numberImage));
             dispatch(pushPrizeLetter(letterPrizeProgress, letterSelect, nameTypeImages, numberImage))
             dispatch(flagGetPrizeInShop(false)); // приз выбран, право на выбор приза аннулировано 
-            setNameImage(stateImages[nameTypeImages][numberImage]);
+            dispatch(selectImgPrize(nameTypeImages, numberImage));//запоминаем картинку выбранного приза для вывода в табличку TakePrize
             setFlagWarning(false);
         }else {
             setFlagWarning(true);
         }
         setFlagComponent(true);
     }
-
+ 
     useEffect(() => {
         return () => {
             setFlagComponent(false);
@@ -45,13 +51,19 @@ function PrizeShop(props) {
     }, []);
 
     return(
-        <div className="prize-shop">
+        <div
+            className="prize-shop"
+        >
+            <div className="prize-shop-header">ВЫ-БЕ-РИ  НАГ-РА-ДУ</div>
             {
                 arrsImages.map((arrImg, index) => {
+
                     return <PrizeShopBlock
                                 key={index}
                                 arrImages={arrImg}
                                 nameBlock={namesBeautiful[namesBlocks[index]]}
+                                bannersBlocks={bannersBlocks[namesBlocks[index]]}
+                                arrImgNameBlock=""
                                 keyBlock={namesBlocks[index]}
                                 onclick={hendlerSelectPrize}
                                 arrFlagsImagesShop={stateFlagsImagesShop[namesBlocks[index]]}
@@ -62,10 +74,10 @@ function PrizeShop(props) {
                 flagComponent ?
                     <TakePrize
                         flagWarning={flagWarning}
-                        nameImage={nameImage}
+                        nameImage={stateImages[nameImage[0]][nameImage[1]]}
                         classname='take-prize-wrapper'
                         classnameWrapper='take-prize'
-                        classnamePrize='priz-Window-Blind'
+                        classnamePrize='priz-take-prize'
                         onclick={()=>{}}
                     />
                     : null

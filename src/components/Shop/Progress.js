@@ -6,7 +6,11 @@ function Progress(props) {
     return (
         <div className="">
 
-            <div>{props.nameBlock}</div>
+            <div
+                style={{ backgroundImage: `url(${props.bannersBlocks})`, width: '15%' }}
+            >
+               
+            </div>
             <div>
                 {
                     props.arrImages.map((imagePrize, index) => {
@@ -14,14 +18,15 @@ function Progress(props) {
                             return <div
                                         key={index}
                                         nameImage={imagePrize}
-                                        className='priz-Window-Blind'
-                                        style={{ backgroundImage: `url(${imagePrize})`}}
+                                        className='priz-progress'
+                                        style={{ backgroundImage: `url(${imagePrize})` }}
                                     ></div>
                         }
                         return null
                     })
                 }
             </div>
+            <div></div>
         </div>
 
     )

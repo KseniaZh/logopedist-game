@@ -8,36 +8,39 @@ function SelectingLevelBlock(props) {
 
     return (
 
-        <div>
-            {
-                props.numbersLevelBlock.map((numberLevel, index) => {
-                    return <div key={index}>
+        <div className='selecting-level-block'>
+            <div>У-РО-ВЕНЬ</div>
+            <div>
+                {
+                    props.numbersLevelBlock.map((numberLevel, index) => {
+                        return <div key={index}>
 
-                            <Button
-                                classname=''
-                                onclick={props.onclick}
-                                name={index+1}
-                                data={index}
-                            />
-                            {
-                                props.levelsComplied[index] ?
-                                    <CoinFinalLevelBlock
-                                        classname=''
-                                        classnameFinalCoin=''
-                                        coin={props.coins[index][0]}
-                                        classnameCoin={props.coins[index][1]}
-                                    />
-                                    : <div className=''></div>
-                            }
+                                <Button
+                                    classname=''
+                                    onclick={props.onclick}
+                                    name={index+1}
+                                    data={index}
+                                />
+                                {
+                                    props.levelsComplied[index] ?
+                                        <CoinFinalLevelBlock
+                                            classname=''
+                                            classnameFinalCoin=''
+                                            coin={props.coins[index][0]}
+                                            classnameCoin={props.coins[index][1]}
+                                        />
+                                        : <div className=''></div>
+                                }
                         
-                        </div>
+                            </div>
 
-                })
-            }  
+                    })
+                }
+            </div>
             <Button
-                classname=''
+                classname='clearButton'
                 onclick={props.onclickStartAgain}
-                name="НА-ЧАТЬ  ЗА-НО-ВО"
+                name="ВСЁ СНА-ЧА-ЛА"
             />
             </div>
         

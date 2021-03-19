@@ -1,17 +1,170 @@
 ﻿
 .prize-shop {
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content:flex-end;
+    width: 100%;
+    box-sizing: border-box;
+    background: $background-shop;
+    border: 1px solid blue;
 
+    //блоки PrizeShopBlock
     > div {
-        border: 3px solid blue;
+
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
 
         > div {
             display: flex;
             flex-direction: row;
+
+            >*{
+                margin-left: 1%;
+            }
         }
+        //banner 
+        >:nth-child(1){
+            position: fixed;
+            left: .5%;
+            width: 99%;
+            height: 13.1%;
+            z-index: 60;
+            border-radius: 10px;
+            box-shadow: 0px 0px 2px 2px rgba(145, 132, 30, 0.7);
+            margin-bottom: 5%;
+        }
+        
+        >:nth-child(2),
+        >:nth-child(3){
+            margin-left: 15%;
+            z-index: 70;
+        }
+        >:nth-child(2){
+            height: 100px;
+        }
+        //board
+        >:nth-child(3){
+            height: 10px;
+            width: 99%;
+            margin-left: .5%;
+            margin-top: 0;
+            border: $border-board;
+            background: $background-board;
+            border-radius: 5px;
+        }
+
+    }
+    //header
+    >:first-child{
+        border: 1px solid green;
+        width: 30%;
+        font-size: 40px;
+        margin: 1% auto .5% auto;
+        color: red;
+    }
+    .take-prize-wrapper{
+        position: absolute;
+        top: 0;
+        right:  0;
+        bottom: 0;
+        left: 0;
+        background: $background-window-blind;
+        
+        >div{
+            position: fixed;
+            left: 50%; 
+            top: 50%; 
+            transform: translate(-50%, -50%);
+            height: 40%;
+            width: 40%;
+            background: $background-footer;
+            z-index: 80;
+        }
+    }
+    
+}
+.priz, .priz-progress, .priz-take-prize{
+    height: 80px;
+    width: 80px;
+    border: 3px solid rgba(212, 196, 4, 0.98);
+    border-radius: 50%;
+    box-shadow: 0px 1px 2px 2px rgba(145, 132, 30, 0.4);
+    margin-top: 1%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    span{
+        font-size: 45px;
+        font-family: sans-serif;
+        color: rgba(252, 233, 4, 0.99);
+        text-shadow: rgba(42, 14, 1, 0.99) 1px 0px 3px;
+        text-align: center;
+    }
+}
+.priz{
+    background: $background-priz !important;
+}
+.priz-progress{
+    border: 1px solid rgba(212, 196, 4, 0.98);
+}
+.priz-take-prize{
+
+}
+
+@keyframes prizHover{
+    0%{
+       transform: translate(2px,0);    
+    }
+
+    50%{
+       transform: translate(-2px,0);
+    }
+    100%{
+       transform: translate(2px,0);
+    }
+}
+.priz:hover, .priz-progress:hover, .priz-take-prize:hover{
+
+    animation: prizHover .2s 2 0s linear;
+    box-shadow: 1px 1px 3px 3px rgba(145, 132, 30, 0.7);
+    span{
+        font-size: 50px;
+        color: rgba(252, 236, 128, 0.99);
+        text-shadow: rgba(74, 18, 1, 0.99) 1px 1px 5px;
+    }
+}
+.priz:hover{
+    background: $background-priz-hover !important;
+}
+
+@keyframes prizActiv{
+    0%{
+        box-shadow: 0px 1px 2px 2px #fdeb89;
+    }
+    100%{
+        box-shadow: 0px 1px 15px 15px #ffd804;
+    }
+}
+@keyframes prizActivSpan{
+    0%{
+        color: #fdeb89;
+    }
+    100%{
+        color: #ffd804;
+    }
+}
+
+
+.priz:active{
+
+    background: $background-priz-activ !important;
+    animation: prizActiv .4s infinite 0s linear;
+    border: 3px solid rgba(248, 241, 183, 0.5);
+    span{
+        font-size: 48px;
+        animation: prizActivSpan .4s infinite 0s linear;
+        text-shadow: rgba(74, 18, 1, 0.99) 1px 1px 5px;
     }
 }

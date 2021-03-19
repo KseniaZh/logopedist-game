@@ -9,8 +9,8 @@ function Button(props) {
     return(
 
             <div 
-                className={props.classname}
                 style={{ backgroundImage: `url(${props.nameImage})` }}
+                className={props.classname}
                 onClick={() => props.onclick(data, data2)}
                 tabIndex = {props.tabindex}
             >    

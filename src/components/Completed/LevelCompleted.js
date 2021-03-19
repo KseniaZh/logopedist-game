@@ -7,25 +7,30 @@ function LevelCompleted(props) {
 
     return (
 
+        <div className='level-completed'>
             <div>
                 <div>!!! МО-ЛО-ДЕЦ !!!</div>
 
-                <div><span> ☚ </span> ВЫ-БЕ-РИ  У-РО-ВЕНЬ</div>
+                <div>
+                    <span> ☚ </span>
+                    <span> ВЫ-БЕ-РИ   У-РО-ВЕНЬ</span>
+                     
+                </div>
             
-                <CoinFinalLevelBlock
-                    classname='coin-final-level-block-wrapper'
-                    classnameFinalCoin='coin-final-level-block'
-                    coin={props.coin[0]}
-                    classnameCoin={props.coin[1]}
-                    flagLevelFinal={props.flagLevelFinal}
-                />
+ 
                 <Button
-                    name='ХО-ЧЕШЬ Е-ЩЁ РАЗ ?'
+                    name='ПОВ-ТО-РИТЬ ?'
                     onclick={props.onclick}
                     data={props.data}
                 />
             </div>
-
+            <CoinFinalLevelBlock
+                classname='coin-final-level-block-wrapper'
+                coin={props.coin[0]}
+                classnameCoin={props.coin[1]}
+                flagLevelFinal={props.flagLevelFinal}
+            />
+        </div>
      )
 }
 

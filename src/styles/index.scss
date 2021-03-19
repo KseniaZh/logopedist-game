@@ -21,12 +21,11 @@ input {
 @import './color_const.scss';
 @import "./mixin_const.scss";
 
-@import './Navigation/NavigationWrapper';
 @import './Navigation/NavigationWindowBlind';
 @import './Navigation/NavigationConsole';
 
 @import './Main/Main.scss';
-@import './Main/Home.scss';
+@import './Home/Home.scss';
 
 @import './Footer/Footer';
 
@@ -37,3 +36,5 @@ input {
 @import './Automation/Automation.scss';
 @import './Automation/ButtonLetter.scss';
 @import './Automation/CoinsMedals.scss';
+
+@import './Home/MenuCircular.scss';

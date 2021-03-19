@@ -1,0 +1,81 @@
+.circular{
+    float: left;
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 205px;
+    height: 205px;
+}
+.circular-menu{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.circular-menu__item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    font-size: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #dbe0e0;
+    background-color: darkblue;
+    transition: 0.4s;
+    outline: none;
+}
+.circular-menu__button{
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px; 
+    background-color: darkblue;
+    outline: none;
+    border-radius: 50%;
+}
+
+.circular-menu__lines,
+.circular-menu__lines::before,
+.circular-menu__lines::after{
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background-color: #dbe0e0;
+    transition: 0.4s;
+}
+
+.circular-menu__lines{
+    transform: translate(-50%, -50%);
+    background-color: red;
+    background-color: transparent;
+}
+.circular-menu__lines::before{
+    content: '';
+}
+.circular-menu__lines::after{
+     content: '';
+    transform: rotate(90deg);
+}
+.circular-menu__button_active .circular-menu__lines::before{
+    transform: rotate(45deg);
+}
+.circular-menu__button_active .circular-menu__lines::after{
+    transform: rotate(-45deg);
+}
+
+/*очистка потока float*/
+.box:after{
+    content: "";
+    display: table;
+    clear: both;
+}

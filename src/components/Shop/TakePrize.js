@@ -6,6 +6,7 @@ function TakePrize(props) {
     
     return(
         <div className={props.classname}>
+            <div>
             {
                 props.flagWarning ?
                     <ButtonLink
@@ -22,7 +23,8 @@ function TakePrize(props) {
                         classnameButtonLink={props.classnameWrapper}
                         classname={props.classnamePrize}
                     />
-            }
+                }
+                </div>
         </div>
 
     )
