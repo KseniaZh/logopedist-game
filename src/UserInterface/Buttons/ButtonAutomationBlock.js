@@ -2,22 +2,21 @@
 
 
 function ButtonAutomationBlock(props) {
+
     const numberButton = props.number;
     const numberButtonBlock = props.numberBlock;
 
-    const hendler = () => {
-        props.onclick(numberButton, numberButtonBlock);
-        let idDiv = document.getElementById(numberButton);
-        idDiv.nextElementSibling.classList.add('clicked')
-    }
+    // прописана возможность задавать класс через store и менять цвет каждой буквы
+    // но сейчас реализована прописовка через css и родственные связи
 
-    return(
+    return (
 
-            <div 
-                className={props.classname.classnameButton}
-                onClick={() => props.onclick(numberButton, numberButtonBlock)}
-                tabIndex={props.tabindex}
-                id={numberButton}
+        <div
+            className={props.classname.classnameButton}
+            onClick={() => props.onclick(numberButton, numberButtonBlock)}
+            tabIndex={props.tabindex}
+            id={numberButton}
+            style={{ background: `${props.styleButton}`, 'box-shadow': `${props.styleButton}`}}
             >    
                 <span
                     className={props.classname.classnameLetter_1}

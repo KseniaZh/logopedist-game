@@ -91,7 +91,7 @@
         opacity: 1;
     }
     100% {
-        
+        font-size: 50px;
         opacity: 0;
     }
 }
@@ -163,7 +163,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    //background: linear-gradient(-20deg, rgba(216, 192, 192, 0.8), rgba(255, 249, 249, 0.99), rgba(230, 182, 182, 0.8)) !important;
     opacity: 0;
     
     >span{

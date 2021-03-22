@@ -1,22 +1,11 @@
-﻿import React, {useState } from 'react';
+﻿import React from 'react';
 
 import ButtonAutomationBlock from '../../UserInterface/Buttons/ButtonAutomationBlock';
 import CoinFinalLevelBlock from '../../UserInterface/Coins/CoinFinalLevelBlock';
 
 function ButtonBlock(props) {
 
-    const [classnameSpan, setClassnameSpan] = useState({
-        'button_1': [props.coin[1]],
-        'button_2': [props.coin[1]],
-        'button_3': [props.coin[1]],
-    })
-
     const hendlerButtonClick = (numberButton, numberButtonBlock) => {
-        let newClass = {
-            ...classnameSpan,
-            [numberButton]: ['heart', 'clicked'],
-        }
-        setClassnameSpan(newClass);
         props.onclick(numberButton, numberButtonBlock);
     }
 
@@ -27,12 +16,19 @@ function ButtonBlock(props) {
         }
         return arrClassName.join(' ')
     }
+    const funcStyleButton = (numberButton) => {
+        if (props.buttonBlockFlags[numberButton] === true) {
+            return 'inherit'
+        }
+        return ''
+    }
 
     return (
         <div className="button-block">
 
             <ButtonAutomationBlock
-                    classname={props.classname}
+                classname={props.classname}
+                styleButton={funcStyleButton('button_1')}
                     onclick={hendlerButtonClick}
                     names={props.namesLettersButtons.namesLettersButton_1}
                     number='button_1'
@@ -46,7 +42,8 @@ function ButtonBlock(props) {
             </span>
 
             <ButtonAutomationBlock
-                    classname={props.classname}
+                classname={props.classname}
+                styleButton={funcStyleButton('button_2')}
                     onclick={hendlerButtonClick}
                     names={props.namesLettersButtons.namesLettersButton_2}
                     number='button_2'
@@ -60,7 +57,8 @@ function ButtonBlock(props) {
             </span>
 
             <ButtonAutomationBlock
-                    classname={props.classname}
+                classname={props.classname}
+                styleButton={funcStyleButton('button_3')}
                     onclick={hendlerButtonClick}
                     names={props.namesLettersButtons.namesLettersButton_3}
                     number='button_3'
