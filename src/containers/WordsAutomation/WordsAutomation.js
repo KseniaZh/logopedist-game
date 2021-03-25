@@ -10,7 +10,6 @@ function WordsAutomation(props) {
     return(
 
         <div className="automation-wrapper">
-            Automation
             <Switch>
                 <Route exact path="/wordsAutomation" component={TypesLettersWords} />
                 <Route path="/wordsAutomation/:id?/:name?" component={AutomationWordsBlocks} />

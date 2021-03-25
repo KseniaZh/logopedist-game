@@ -85,20 +85,18 @@ function WordBlocks(props) {
     }, [])
 
     return (
-        <div className="automation-buttons-blocks-word">
+        <div className="automation-buttons-blocks">
 
 
-            <div>
-                Тип буквы {props.typeLetter} буква {letterSelect}
-
-                <SelectingLevelBlock
-                    numbersLevelBlock={Object.keys(stateWords[letterSelect])}
-                    onclick={hendlerSelectWordBlock}
-                    onclickStartAgain={hendlerStartAgain}
-                    levelsComplied={stateLevelWordsFinal[letterSelect]}
-                    coins={coins}
-                />
-            </div>
+            
+            <SelectingLevelBlock
+                numbersLevelBlock={Object.keys(stateWords[letterSelect])}
+                onclick={hendlerSelectWordBlock}
+                onclickStartAgain={hendlerStartAgain}
+                levelsComplied={stateLevelWordsFinal[letterSelect]}
+                coins={coins}
+            />
+           
 
             <LevelBlockWord
                 onclickWord={hendlerClickWord}
@@ -107,6 +105,7 @@ function WordBlocks(props) {
                 name={stateWords[letterSelect][numberWordBlock][counter]}
                 flagLevelFinal={stateLevelWordsFinal[letterSelect][numberWordBlock]}
                 coin={coins[numberWordBlock]}
+                letterSelect={letterSelect}
             />
 
             <BoxCoinsLevelCompleted

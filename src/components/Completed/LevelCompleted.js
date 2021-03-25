@@ -7,7 +7,7 @@ function LevelCompleted(props) {
 
     return (
 
-        <div className='level-completed'>
+        <div className={props.classname}>
             <div>
                 <div>!!! МО-ЛО-ДЕЦ !!!</div>
 

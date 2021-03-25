@@ -6,15 +6,24 @@ function FinaleTakePrize(props) {
 
     return (
 
-            <div>
-                <div>!!! МО-ЛО-ДЕЦ !!!</div>
+            <div
+                className="finale-take-prize"
+            >
+                <div>
+                    <div>!!! МО-ЛО-ДЕЦ !!!</div>
 
-                <ButtonLink
-                    name='ВЫ-БЕ-РИ  НАГ-РА-ДУ'
-                    onclick={props.onclick}
-                    classname=''
-                    to='/prizeShop'
-                />
+                    <div>ВЫ-БЕ-РИ  НАГ-РА-ДУ</div>
+
+                    <ButtonLink
+                    name='🏆'
+                        onclick={props.onclick}
+                        classname=''
+                        to='/prizeShop'
+                    />
+
+                    <div></div>
+
+                </div>
             </div>
 
      )

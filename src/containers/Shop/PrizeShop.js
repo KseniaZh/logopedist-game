@@ -75,9 +75,7 @@ function PrizeShop(props) {
                     <TakePrize
                         flagWarning={flagWarning}
                         nameImage={stateImages[nameImage[0]][nameImage[1]]}
-                        classname='take-prize-wrapper'
-                        classnameWrapper='take-prize'
-                        classnamePrize='priz-take-prize'
+
                         onclick={()=>{}}
                     />
                     : null

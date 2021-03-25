@@ -2,7 +2,7 @@
 import { connect, useSelector } from "react-redux";
 
 import AutomationBlocks from "./AutomationBlocks";
-import TypesLetters from "./TypesLetters";
+import Home from "../Home/Home";
 
 
 function AutomationButtonsBlocks(props) {
@@ -13,7 +13,7 @@ function AutomationButtonsBlocks(props) {
         <>
             {
                 letterSelect === 'X'?
-                    <TypesLetters />
+                    <Home />
                     : <AutomationBlocks
                         typeLetter={props.match.params.id}
                     />

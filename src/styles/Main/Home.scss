@@ -1,38 +1,3 @@
 ﻿
-.home {
-    user-select: none;
-    display: flex;
-    position: relative;
-    width: 80%;
-    background: $background-home;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: column;
 
 
-    > div {
-        display: flex;
-        position: relative;
-        width: 98%;
-        height: auto;
-        border-radius: 10px;
-        margin: 1rem auto 0 auto;
-        flex-direction: row;
-        background: $background-home-block;
-    }
-    /*Preview*/
-    >:nth-child(3) {
-        flex-direction: column;
-
-
-        > div {
-            display: flex;
-            width: 90%;
-            height: auto;
-            margin: 1rem auto 0 auto;
-            background: $background-preview-element;
-
-            flex-direction:column;
-        }
-    }
-}

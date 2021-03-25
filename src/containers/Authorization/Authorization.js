@@ -1,6 +1,6 @@
 ﻿import React, { useState, useEffect } from 'react';
-
 import { connect, useDispatch, useSelector } from "react-redux";
+
 import Registration from '../../components/Authorization/Registration';
 import Hi from '../../components/Home/Hi';
 
@@ -128,21 +128,19 @@ function Authorization(props) {
     }, [])
 
     return (
-    <div>
+    <>
             {
                 flagAutorization ?
                     <Hi
-                        classname='home-hi'
                         player={activePlayer}
                     />
                     :<Registration
                         onchange={onchangeRegistration}
                         onclick={hendlerRegistration}
                         value={valueRegistration}
-                        styles=''
                     />
             }
-    </div>
+    </>
         
     )
 

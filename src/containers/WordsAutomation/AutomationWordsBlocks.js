@@ -2,7 +2,7 @@
 import { connect, useSelector } from "react-redux";
 
 import WordBlocks from "./WordBlocks";
-import TypesLettersWords from "./TypesLettersWords";
+import Hi from "../../components/Home/Hi";
 
 
 function AutomationWordsBlocks(props) {
@@ -13,7 +13,7 @@ function AutomationWordsBlocks(props) {
         <>
             {
                 letterSelect === 'X'?
-                    <TypesLettersWords />
+                    <Hi />
                     : <WordBlocks
                         typeLetter={props.match.params.id}
                     />

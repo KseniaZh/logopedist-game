@@ -9,7 +9,7 @@ export const flagLevelLetterEnd = (stateLevelEnd, letter) => {
 
     let obj = { ...stateLevelEnd };
 
-    obj[letter] = true;
+    obj[letter][0] = true;
 
     localStorage[`${JSON.parse(localStorage['player'])}_letterPrizes`] = JSON.stringify(obj);
 
@@ -33,7 +33,7 @@ export const pushPrizeLetter = (letterPrizeProgress, letter, nameTypeImages, num
     let obj = { ...letterPrizeProgress };
     let img = [nameTypeImages, numberImage];
 
-    obj[letter] = [true];
+    obj[letter][0] = true;
 
     obj[letter].push(img);
 

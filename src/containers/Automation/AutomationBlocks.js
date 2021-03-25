@@ -153,6 +153,7 @@ function AutomationBlocks(props) {
                         coin={coins[numberLevelBlock]}
                         flagLevelFinal={stateLevelFinal[letterSelect][numberLevelBlock]}
                         onclick={hendlerLevelRepeat}
+                        classname='level-completed'
                     />
                     : <LevelBlock
                         letterSelect={letterSelect}
@@ -186,10 +187,3 @@ function AutomationBlocks(props) {
 }
 
 export default connect()(AutomationBlocks)
-
-
-//{
-//    stateLevelEnd['letter'][letterSelect] ?
-//        <div>ГОТОВО</div>
-//        : <div>ИСПЫТАНИЕ</div>
-//}

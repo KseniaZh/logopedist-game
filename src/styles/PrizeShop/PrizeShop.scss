@@ -1,12 +1,12 @@
-﻿
-.prize-shop {
+﻿.prize-shop {
     display: flex;
     flex-direction: column;
     justify-content:flex-end;
     width: 100%;
     box-sizing: border-box;
     background: $background-shop;
-    border: 1px solid blue;
+    padding: 5% 0 1%;
+    height: 100%;
 
     //блоки PrizeShopBlock
     > div {
@@ -56,34 +56,96 @@
     }
     //header
     >:first-child{
-        border: 1px solid green;
-        width: 30%;
         font-size: 40px;
         margin: 1% auto .5% auto;
-        color: red;
+        word-spacing: 20px;
     }
+    
+    
+//табличка TakePrize
+    
     .take-prize-wrapper{
-        position: absolute;
-        top: 0;
-        right:  0;
-        bottom: 0;
-        left: 0;
+        z-index: 110;
+        @include box-all-body;
         background: $background-window-blind;
+        border-radius: 20px;
         
         >div{
-            position: fixed;
-            left: 50%; 
-            top: 50%; 
-            transform: translate(-50%, -50%);
+            z-index: 120;
+            @include box-central-position;
             height: 40%;
             width: 40%;
-            background: $background-footer;
-            z-index: 80;
+            background: $background-take-prize;
+            
+            >div{
+                @include box-all-body;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                padding-top: 15%;
+                
+                //это <NavLink, далее разностится на 
+                //.take-prize и .take-prize-warning
+                >*{
+                    @include box-all-body;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    padding-top: 15%;
+                }
+            }
+        }
+    }
+    
+    .take-prize{
+        box-shadow: 0px 0px 20px 25px rgba(227, 177, 152, 0.9);
+       
+        >*{
+            box-shadow: 0px 0px 45px 45px rgba(253, 252, 249, 0.99) !important;   
+        }
+
+    }
+    .take-prize:after{
+        content: 'ПО-ЛУ-ЧИ ПРИЗ';
+        color: rgba(195, 75, 23, 0.99);
+        font-size: 40px;
+        font-weight: 900;
+        font-family: Balsamiq Sans;
+        word-spacing: 20px;
+        display: flex;
+        position: fixed;
+        top: 67%;
+        width: 100%;
+        left: 20%;
+    }
+    .take-prize-warning{
+        box-shadow: 0px 0px 40px 25px rgba(227, 92, 92, 0.99);
+    }
+    //если приз не выбран, warning
+    
+    .prize-shop-warning-button{
+        z-index: 120;
+       @include box-all-body;
+        background: $background-warning;
+        border-radius: 20px;
+        
+        >span{
+            @include box-central-position;
+            color: $color-header-red;
+            font-size: 40px;
+            font-weight: 800;
+            word-spacing: 200px;
+            line-height: 65px;
+            text-align: center;
+            height: 65%;
+            width: 60%;
         }
     }
     
 }
 .priz, .priz-progress, .priz-take-prize{
+    z-index: 130;
     height: 80px;
     width: 80px;
     border: 3px solid rgba(212, 196, 4, 0.98);
@@ -125,6 +187,7 @@
        transform: translate(2px,0);
     }
 }
+
 .priz:hover, .priz-progress:hover, .priz-take-prize:hover{
 
     animation: prizHover .2s 2 0s linear;
@@ -147,6 +210,7 @@
         box-shadow: 0px 1px 15px 15px #ffd804;
     }
 }
+
 @keyframes prizActivSpan{
     0%{
         color: #fdeb89;

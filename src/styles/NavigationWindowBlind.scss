@@ -1,0 +1,55 @@
+﻿.NavigationWindowBlind {
+    z-index: $z-index-navigation-window-blind;
+    background: linear-gradient(180deg, rgba(209, 201, 192, 0.9) 10%, rgba(250, 246, 240, .8) 45%, rgba(198, 186, 180, .8) 100%);
+
+    @include box-all-body (fixed);
+    cursor: pointer;
+    opacity: 1;
+    
+    padding-top: 7%;
+    
+    font-size: 35px;
+    font-weight: 700;
+    color: #fd4704;
+    
+    display:flex;
+    flex-wrap: wrap;
+    
+    // блоки буква-награды
+    >div{      
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        align-items: center;
+        
+        margin: 5% 0 0 2%;
+        
+        padding: 2%;
+        height: 80px;
+        background: linear-gradient(180deg, rgba(209, 201, 192, 0.9) 10%, rgba(250, 246, 240, .8) 45%, rgba(198, 186, 180, .8) 100%);
+        border-radius: 30px;
+        box-shadow: .5px .5px 2px 2px rgba(198, 186, 180, .8);
+        
+        //награды
+        >div{
+            margin-left: .5%;
+        }
+        //буква
+        >:nth-child(1){
+            width: 60px;
+        }
+    }
+    >:first-child{
+        position: fixed !important;
+        left: 34%;
+        top: -1.8%;
+        color: #1eb21e;
+        word-spacing: 15px;
+        background: none !important;
+        box-shadow: none !important;
+    }
+}
+
+img {
+    opacity: 1 !important;
+}

@@ -1,0 +1,103 @@
+.registration{
+    @include box-all-body(fixed, 0, 0, 0, 0);
+    
+    
+    >div{
+      
+        @include box-all-body(fixed, 0, 0, 0, 0);
+     
+       
+        background-image: url(./backg.jpg);
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 3%;
+        
+        >div{
+           
+        }
+        
+        >:nth-child(1){
+            margin-top: 13%;
+            
+            font-size: 40px;
+            color: red;
+            word-spacing: 20px;
+            border-radius: 20px;
+            background:  rgba(250, 246, 240, .7);
+            box-shadow: 0px 0px 20px 20px rgba(250, 246, 240, .7);
+        }
+        
+        >:nth-child(2){
+            
+            @include box-central-position;
+            font-size: 30px;
+            
+            height: 45%;
+            width: 38%;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            
+            width: 90%;
+            padding: 8%;
+            
+            >:nth-child(1){
+
+                color: $color-letter;
+                font-weight: 1000;
+                word-spacing: 15px;
+                margin: 13% 0 1% 0;
+                border-radius: 20px;
+                background:  rgba(250, 246, 240, .9);
+                box-shadow: 0px 0px 20px 20px rgba(250, 246, 240, .9);
+                
+            }
+            
+            //input
+            >:nth-child(2){
+                margin: .5% 0 10%;
+                width: 45%;
+                padding: 8px;
+                
+                border-radius: 20px;
+                border: none;
+                background:  rgba(250, 246, 240, .9);
+                box-shadow: 0px 0px 10px 1px rgba(150, 181, 156, 0.8) inset;
+                
+                color: red;
+                font-size: 50px;
+                letter-spacing: 15px;
+                text-align: center;
+                
+            }
+            >:nth-child(2):focus {
+               
+                background: rgb(255, 254, 254);
+                box-shadow: 0px 0px 3px 3px rgb(97, 211, 119);
+            }
+ 
+            
+            >:nth-child(3){
+                padding: 1.5%;
+                border-radius: 20px;
+                background: linear-gradient(180deg, rgba(150, 206, 162, 0.7) 10%, rgba(250, 246, 240, .85) 35%, rgba(87, 155, 101, 0.89) 100%) !important;
+                box-shadow: 0px 1px 1px 1px rgba(150, 162, 153, 0.89);
+                transition: all .3s ease 0s;
+            }
+            >:nth-child(3):hover{
+                color: #d31111;
+                background: linear-gradient(180deg, rgba(181, 222, 189, 0.99) 10%, rgba(255, 255, 255, 0.99) 50%, rgba(115, 183, 130, 0.99) 100%) !important;
+                box-shadow: 0px 2px 3px 3px #a54646;
+            }
+            >:nth-child(3):active{
+                background: linear-gradient(180deg, rgba(150, 206, 162, 0.99) 10%, rgba(255, 255, 255, 0.99) 65%, rgba(81, 152, 96, 0.99) 100%) !important;
+                box-shadow: 0px 1px 1px 1px rgb(123, 124, 123);
+            }
+        }
+    }
+}

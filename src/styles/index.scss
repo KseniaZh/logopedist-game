@@ -21,15 +21,17 @@ input {
 @import './color_const.scss';
 @import "./mixin_const.scss";
 
-@import './Navigation/NavigationWindowBlind';
+@import './Registration.scss';
+
+@import './NavigationWindowBlind';
 @import './Navigation/NavigationConsole';
 
 @import './Main/Main.scss';
-@import './Home/Home.scss';
-
-@import './Footer/Footer';
+@import './Home.scss';
 
 @import './PrizeShop/PrizeShop.scss';
+
+@import './Automation/FinaleTakePrize.scss';
 
 @import './UI/ButtonScrollDownUp';
 

@@ -1,13 +1,9 @@
-﻿
-.automation-wrapper {
+﻿.automation-wrapper {
     user-select: none;
     display: flex;
     position: relative;
     width: 100%;
     height: 100%;
- // background: linear-gradient(-5deg, #0486db,  #0275c1) !important;
-   // background: #97c7ea;
-   // background: rgba(51, 140, 206, 0.31);
     background: rgba(19, 109, 177, 0.4);
     margin: 0;
     flex-direction: column;
@@ -184,10 +180,10 @@
 
     //LevelBlock
    // > :nth-child(2)
-    .level-block {
+    .level-block, .level-block-word {
         width: 55%;
-        margin: 7% 0;
-
+        margin: 7% 0;        
+        
         //буква Т заголовок
         
         > :nth-child(1) {
@@ -195,7 +191,7 @@
             position: relative;
             margin-bottom: 5%;
             margin-left: -2%;
-            color: #fd0447;
+            color: $color-header-red;
             font-size: 40px;
             font-weight: 800;
             width: 40%;
@@ -205,7 +201,7 @@
                 padding-left: 13%;
                 font-size: 60px;
                 font-weight: 900;
-                color: #ff1c85;
+                color: $color-header-pink;
             }
         }
 
@@ -213,11 +209,56 @@
             content: "";
             @include cloud;
         }
+    }
 
-        > :nth-child(2) {
-            border-radius: 15px;
-            width: 90%; 
+    .level-block-word{
+        width: 55%;
+        margin: 7% 0;
+    }
+    .level-block-word-button{                
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        color: $color-letter;
+        margin-top: 5%;
+        font-weight: 800;
+
+        >:nth-child(1){
+            font-size: 40px;
         }
+        .level-block-word-button__button{
+            font-size: 80px;
+            word-spacing: 100px;
+            line-height: 120px;
+            text-align: center;
+            margin-top: 7%;
+            padding: 7%;
+            width: 500px;
+
+            border-radius: 25px;
+            background: linear-gradient(180deg, rgba(214, 214, 214, 0.99), rgba(226, 226, 226, 0.99) 45%, rgba(208, 208, 208, 0.99) )!important;
+            box-shadow: 0px 2px 3px 3px rgba(130, 156, 175, 0.61); 
+            transition: all .3s ease 0s;
+
+            display: flex;
+            align-items: center;
+
+            >span{
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        }
+        .level-block-word-button__button:hover{
+            background: linear-gradient(180deg, rgba(198, 197, 197, 0.99), rgba(226, 226, 226, 0.99) 45%, rgba(190, 185, 185, 0.99) )!important;
+            box-shadow: 0px 3px 4px 4px rgba(130, 156, 175, 0.61)!important;
+        }
+        .level-block-word-button__button:active{
+            background: linear-gradient(180deg, rgba(198, 197, 197, 0.99), rgba(226, 226, 226, 0.99) 75%, rgba(190, 185, 185, 0.99) ) !important;
+            box-shadow: 0px 1px 1px 1px rgba(130, 156, 175, 0.61) !important;
+        }
+
     }
     
     @keyframes bubble-coin-level-completed {
@@ -288,25 +329,18 @@
         }
     }
 
-    .level-completed{
+    .level-completed, .level-completed-word{
         width: 55%;
         height: 100%;
-        
+
         >:nth-child(1){
-            width: 100%;
-            height: 100%;
-            margin-left: auto;
-            margin-right: auto;
             display: flex;
             flex-direction: column;
             justify-content:flex-start;
             align-items: center;
             
-            >div{
-            }
             >:nth-child(1){
                 @include header-automation;
-                margin-top: 32%;
                 margin-bottom: 15%;
                 word-spacing: 20px;
                 font-size: 45px;
@@ -321,7 +355,6 @@
                 
                 >span{
                     margin-bottom: 5%;
-                 
                 }
                 //указательный палец
                 >:nth-child(1){
@@ -331,7 +364,7 @@
                     position: fixed;
                     top: 5%;
                     text-shadow: #f7f1f1 0px 0px 10px; 
-                    color: #ff008a;
+                    color: $color-header-pink;
                     animation: select-new-level 5s 3 6s ease;
                 }
                 >:nth-child(2){
@@ -340,40 +373,69 @@
             }
             >:nth-child(3){
                 @include clear-button-auto;
-                width: 32%;
+                width: 35%;
                 margin-top: 5%;
             }
         }
     }
-
+    .level-completed{
+        >:nth-child(1){
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            
+            >:nth-child(1){
+              margin-top: 32%;  
+            }
+        }
+    }
+    .level-completed-word{
+        padding: 0;
+        margin-left: -23% !important;
+        width: 140%;
+        
+        >:nth-child(1){
+            width: 100%;
+            height: 100%;
+            margin-right: 20%;
+            
+            >:nth-child(1){
+                margin-top: 10%;  
+            }
+        }
+    }
     
     //BoxCoinsLevelCompleted
      @keyframes box-coins{
         0%{
             transform: rotate(0);
         }
-        74%{
+        94%{
             transform: rotate(0);
         }
-        75%{
-            transform: rotate(1deg);
-        }
-        80%{
-            transform: rotate(-1deg);
-        }
-        85%{
-            transform: rotate(1deg);
-        }
-        90%{
-            transform: rotate(-1deg);
-        }
         95%{
+            transform: rotate(1deg);
+        }
+        96%{
+            transform: rotate(-1deg);
+        }
+        97%{
+            transform: rotate(1deg);
+        }
+        98%{
+            transform: rotate(-1deg);
+        }
+        99%{
             transform: rotate(1deg);
         }
         100%{
             transform: rotate(-1deg);
         }
     }
+    
+    
+    //банка с наградами
     
     > :nth-child(3) {
         width: 22%;
@@ -382,7 +444,7 @@
         justify-content: flex-start;
         margin-top: 10em;
         margin-bottom: 10px;
-        animation: box-coins 1s 1 8s ease;
+        animation: box-coins 9s infinite 50s ease;
 
         > div {
             background: linear-gradient(90deg, rgba(147, 140, 127, 0.99)0%, rgba(209, 197, 128, 0.5) 7%, rgba(255, 255, 249, 0.58)25%, rgba(255, 255, 249, 0.69), rgba(253, 253, 235, 0.57), rgba(253, 237, 150, 0.5), rgba(181, 159, 116, 0.4) 90%, rgba(147, 143, 137, 0.99)99%);
@@ -439,29 +501,28 @@
         >span{
             font-size: 32px;
             margin-right: 4px;
-            color: #080858;
+            color: $color-letter;
             transition: all .3s ease 0s;
-            opacity: 1 !important;
         }
     }
     >div:hover{
 
-         background: linear-gradient(180deg, rgba(198, 197, 197, 0.99), rgba(226, 226, 226, 0.99) 45%, rgba(190, 185, 185, 0.99) );
+        background: linear-gradient(180deg, rgba(198, 197, 197, 0.99), rgba(226, 226, 226, 0.99) 45%, rgba(190, 185, 185, 0.99) );
         box-shadow: 0px 3px 2px 2px rgba(130, 156, 175, 0.61);
         
         >span{
             font-size: 38px;
-            color: rgb(33, 2, 204);
+            color: $color-letter-hover;
         }
     }
     >div:active{
         
-         background: linear-gradient(180deg, rgba(198, 197, 197, 0.99), rgba(226, 226, 226, 0.99) 75%, rgba(190, 185, 185, 0.99) );
+        background: linear-gradient(180deg, rgba(198, 197, 197, 0.99), rgba(226, 226, 226, 0.99) 75%, rgba(190, 185, 185, 0.99) );
         box-shadow: 0px 1px 1px 1px rgba(130, 156, 175, 0.61);
         
         >span{
             font-size: 30px;
-            color: rgb(21, 3, 119);
+            color: $color-letter-activ;
         }
     }
     >span{

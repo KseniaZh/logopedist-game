@@ -10,7 +10,7 @@ function ButtonBlock(props) {
     }
 
     const funcCNSpan = (numberButton) => {
-        const arrClassName = ['heart'];
+        const arrClassName = ['heart', `${props.classSpan}`];
         if (props.buttonBlockFlags[numberButton] === true) {
             arrClassName.push('clicked');
         }

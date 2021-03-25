@@ -65,7 +65,7 @@ const initialState = {
         "Ш": [],
         "Щ": [],
     },
-    nameImageSelectedPrize: ['dolls', 0]
+    nameImageSelectedPrize: ['dolls', 0],
  };
 
 

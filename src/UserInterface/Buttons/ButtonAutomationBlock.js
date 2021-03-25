@@ -16,7 +16,7 @@ function ButtonAutomationBlock(props) {
             onClick={() => props.onclick(numberButton, numberButtonBlock)}
             tabIndex={props.tabindex}
             id={numberButton}
-            style={{ background: `${props.styleButton}`, 'box-shadow': `${props.styleButton}`}}
+            style={{ background: `${props.styleButton}`, boxShadow: `${props.styleButton}`}}
             >    
                 <span
                     className={props.classname.classnameLetter_1}

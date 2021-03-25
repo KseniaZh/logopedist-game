@@ -6,24 +6,33 @@ import LevelCompleted from '../../components/Completed/LevelCompleted';
 function LevelBlockWord(props) {
 
     return (
-        <div className="automation-buttons-blocks">
-            {
-                props.flagLevelFinal ?
-                    <LevelCompleted
-                            coin={props.coin}
-                            flagLevelFinal={props.flagLevelFinal}
-                            onclick={props.onclickRepeat}
-                     />
-                    :<div>
-                        <div>{props.data}</div>
-                        <Button
-                            name={props.name}
-                            onclick={props.onclickWord}
-                            data={props.data}
+        <div className='level-block-word'>
+            <div>
+                БУК-ВА
+                <span>
+                    {props.letterSelect}
+                </span>
+            </div>
+            <div>
+                {
+                    props.flagLevelFinal ?
+                        <LevelCompleted
+                                coin={props.coin}
+                                flagLevelFinal={props.flagLevelFinal}
+                                onclick={props.onclickRepeat}
+                                classname='level-completed-word'
                         />
-                    </div>
-            }
-            
+                        : <div className='level-block-word-button'>
+                            <div>{props.data}</div>
+                            <Button
+                                name={props.name}
+                                onclick={props.onclickWord}
+                                data={props.data}
+                                classname='level-block-word-button__button'
+                            />
+                        </div>
+                }
+            </div>
         
          </div>
      )

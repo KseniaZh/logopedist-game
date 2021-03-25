@@ -5,11 +5,12 @@
     "\\src\\components",
     "\\src\\components\\Shop",
     "\\src\\containers",
-    "\\src\\containers\\Automation",
+    "\\src\\containers\\Shop",
+    "\\src\\store",
+    "\\src\\store\\LettersBlocks",
     "\\src\\UserInterface",
-    "\\src\\UserInterface\\Buttons",
-    "\\src\\UserInterface\\Coins"
+    "\\src\\UserInterface\\Buttons"
   ],
-  "SelectedNode": "\\src\\components\\Shop\\Progress.js",
+  "SelectedNode": "\\src\\store\\LettersBlocks\\reducerWords.js",
   "PreviewInSolutionExplorer": false
 }

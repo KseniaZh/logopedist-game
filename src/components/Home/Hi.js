@@ -7,12 +7,11 @@ function Hi(props) {
     return(
 
         <div
-            className={props.classname}
+            className='home-hi'
         >
-
-            <TypesLetters />
             <TypesLetters />
             <TypesLettersWords />
+
         </div>
   
     )
