@@ -23,6 +23,7 @@ const initialState = {
     "С": [false, false, false, false, false, false],
     "Т": [false, false, false, false, false, false],
     "Ф": [false, false, false, false, false, false],
+  //  "Х": [false, false, false, false, false, false],
     "Ц": [false, false, false, false, false, false],
     "Ч": [false, false, false, false, false, false],
     "Ш": [false, false, false, false, false, false],

@@ -10,6 +10,7 @@ const initialState = {
     'dolls': [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,],
     'princess': [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,], 
     'unicorns': [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,],
+    'dragon': [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,],
  };
 
 

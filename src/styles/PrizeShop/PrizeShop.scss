@@ -5,7 +5,7 @@
     width: 100%;
     box-sizing: border-box;
     background: $background-shop;
-    padding: 5% 0 1%;
+    padding: 15% 0 1% 0;
     height: 100%;
 
     //блоки PrizeShopBlock
@@ -58,7 +58,10 @@
     >:first-child{
         font-size: 40px;
         margin: 1% auto .5% auto;
-        word-spacing: 20px;
+      //  word-spacing: 500px;
+        word-spacing: 12em;
+        color: #dd0606;
+        padding-left: 1em;
     }
     
     

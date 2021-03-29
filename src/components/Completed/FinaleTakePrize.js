@@ -1,8 +1,14 @@
-﻿import React from 'react';
+﻿import React, { useEffect } from 'react';
 
 import ButtonLink from '../../UserInterface/Buttons/ButtonLink';
 
 function FinaleTakePrize(props) {
+
+    useEffect(() => {
+        return () => {
+            props.onclick();
+        }
+    }, [])
 
     return (
 
@@ -15,7 +21,7 @@ function FinaleTakePrize(props) {
                     <div>ВЫ-БЕ-РИ  НАГ-РА-ДУ</div>
 
                     <ButtonLink
-                    name='🏆'
+                        name='🏆'
                         onclick={props.onclick}
                         classname=''
                         to='/prizeShop'

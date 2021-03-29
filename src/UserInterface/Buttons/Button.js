@@ -9,7 +9,7 @@ function Button(props) {
     return(
 
             <div 
-                style={{ backgroundImage: `url(${props.nameImage})` }}
+            style={{ backgroundImage: `url(${props.nameImage})`, boxShadow: `${props.boxShadow}`}}
                 className={props.classname}
                 onClick={() => props.onclick(data, data2)}
                 tabIndex = {props.tabindex}

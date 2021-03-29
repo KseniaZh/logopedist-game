@@ -11,7 +11,7 @@ import dogs_banner from '../../img/banners/schp19.jpg';
 import unicorns_banner from '../../img/banners/unicorns.jpg';
 import princess_banner from '../../img/banners/princess.jpg';
 import dolls_banner from '../../img/banners/lol.jpg';
-
+import dragon_banner from '../../img/banners/dragons1.jpg';
 
 const initialState = {
     flagGetPrize: false,
@@ -36,6 +36,7 @@ const initialState = {
         'dolls': 'Куколки',
         'princess': 'Принцессы',
         'unicorns': 'Волшебные единороги',
+        'dragon': 'Огнедышащие драконы',
     },
     banners: {
         'dinosaur': dinosaur_banner,
@@ -43,6 +44,7 @@ const initialState = {
         'dolls': dolls_banner,
         'princess': princess_banner,
         'unicorns': unicorns_banner,
+        'dragon': dragon_banner,
     },
     boxCoinsLetter: {
         "Б": [],

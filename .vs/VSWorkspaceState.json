@@ -5,12 +5,12 @@
     "\\src\\components",
     "\\src\\components\\Shop",
     "\\src\\containers",
+    "\\src\\containers\\Authorization",
     "\\src\\containers\\Shop",
+    "\\src\\img\\dino",
     "\\src\\store",
-    "\\src\\store\\LettersBlocks",
-    "\\src\\UserInterface",
-    "\\src\\UserInterface\\Buttons"
+    "\\src\\store\\Coins"
   ],
-  "SelectedNode": "\\src\\store\\LettersBlocks\\reducerWords.js",
+  "SelectedNode": "\\src\\containers\\Shop\\ProgressShop.js",
   "PreviewInSolutionExplorer": false
 }

@@ -18,6 +18,7 @@ const initialState = {
         { type: 2, name: "С" },
         { type: 2, name: "Т" },
         { type: 2, name: "Ф" },
+        { type: 2, name: "Х" },
         { type: 2, name: "Ц" },
         { type: 2, name: "Ч" },
         { type: 2, name: "Ш" },

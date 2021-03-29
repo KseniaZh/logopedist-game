@@ -63,6 +63,19 @@ import unicorn_8 from '../../img/unicorns/unicorn9.jpg';
 import unicorn_9 from '../../img/unicorns/unicorn10.jpg';
 import unicorn_10 from '../../img/unicorns/unicorn11.jpg';
 
+import dragon_0 from '../../img/dragon/dragon1.jpg';
+import dragon_1 from '../../img/dragon/dragon2.png';
+import dragon_2 from '../../img/dragon/dragon3.jpg';
+import dragon_3 from '../../img/dragon/dragon4.jpg';
+import dragon_4 from '../../img/dragon/dragon5.jpg';
+import dragon_5 from '../../img/dragon/dragon6.jpg';
+import dragon_6 from '../../img/dragon/dragon7.jpg';
+import dragon_7 from '../../img/dragon/dragon8.jpg';
+import dragon_8 from '../../img/dragon/dragon9.jpg';
+import dragon_9 from '../../img/dragon/dragon10.jpg';
+import dragon_10 from '../../img/dragon/dragon11.png';
+
+
 
 const initialState = {
     'dinosaur': [
@@ -129,6 +142,19 @@ const initialState = {
         unicorn_8,
         unicorn_9,
         unicorn_10,
+    ],
+    'dragon': [
+        dragon_0,
+        dragon_1,
+        dragon_2,
+        dragon_3,
+        dragon_4,
+        dragon_5,
+        dragon_6,
+        dragon_7,
+        dragon_8,
+        dragon_9,
+        dragon_10,
     ],
  };
 

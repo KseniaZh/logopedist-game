@@ -213,30 +213,50 @@
 
     .level-block-word{
         width: 55%;
-        margin: 7% 0;
+
+        >:nth-child(2){
+            width: 100%;
+            height: 100%;
+        }
     }
     .level-block-word-button{                
         display: flex;
         flex-direction:column;
-        justify-content: center;
+        justify-content:flex-start;
         align-items: center;
         color: $color-letter;
-        margin-top: 5%;
         font-weight: 800;
+        
+        width: 100%;
+        height: 100%;
 
         >:nth-child(1){
             font-size: 40px;
         }
-        .level-block-word-button__button{
+        >:nth-child(2){
             font-size: 80px;
-            word-spacing: 100px;
-            line-height: 120px;
+            word-spacing: 120px;
+            line-height: 100px;
             text-align: center;
+            
+            margin-top: 5%;
+            width: 70%;
+            height: 50%;
+        }
+        .level-block-word-button__button{
+            
+            display: flex;
+            position: fixed;
+            bottom: 10%;
+            
             margin-top: 7%;
-            padding: 7%;
-            width: 500px;
 
-            border-radius: 25px;
+            width: 80px;
+            height: 80px;
+            font-size: 40px;
+            font-weight: 1100;
+
+            border-radius: 15px;
             background: linear-gradient(180deg, rgba(214, 214, 214, 0.99), rgba(226, 226, 226, 0.99) 45%, rgba(208, 208, 208, 0.99) )!important;
             box-shadow: 0px 2px 3px 3px rgba(130, 156, 175, 0.61); 
             transition: all .3s ease 0s;
@@ -251,12 +271,16 @@
 
         }
         .level-block-word-button__button:hover{
-            background: linear-gradient(180deg, rgba(198, 197, 197, 0.99), rgba(226, 226, 226, 0.99) 45%, rgba(190, 185, 185, 0.99) )!important;
-            box-shadow: 0px 3px 4px 4px rgba(130, 156, 175, 0.61)!important;
+            font-size: 50px;
+            background: linear-gradient(-5deg, rgba(206, 158, 166, 0.8), rgba(255, 252, 252, 0.9) 60%, rgba(170, 8, 71, 0.19))!important;
+     
+            box-shadow: 0px 2px 3px 3px rgba(143, 155, 163, 0.86)!important;
         }
         .level-block-word-button__button:active{
-            background: linear-gradient(180deg, rgba(198, 197, 197, 0.99), rgba(226, 226, 226, 0.99) 75%, rgba(190, 185, 185, 0.99) ) !important;
-            box-shadow: 0px 1px 1px 1px rgba(130, 156, 175, 0.61) !important;
+            font-size: 48px;
+            color: #db063f;
+            background: linear-gradient(0deg, rgba(185, 141, 148, 0.92), rgba(255, 252, 252, 0.9) 30%, rgba(170, 8, 71, 0.19))!important;
+            box-shadow: 0px 1px 2px 2px rgba(253, 4, 4, 0.56)!important;
         }
 
     }

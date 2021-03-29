@@ -2,7 +2,7 @@
 import { connect, useDispatch, useSelector } from "react-redux";
 
 import BoxCoinsLevelCompleted from '../../components/Completed/BoxCoinsLevelCompleted';
-import SelectingLevelBlock from '../../UserInterface/SelectingLevelBlock';
+import SelectingLevelBlock from '../../components/Automation/SelectingLevelBlock';
 import LevelBlockWord from '../../components/WordsAutomation/LevelBlockWord';
 import FinaleTakePrize from '../../components/Completed/FinaleTakePrize';
 
@@ -87,10 +87,9 @@ function WordBlocks(props) {
     return (
         <div className="automation-buttons-blocks">
 
-
-            
             <SelectingLevelBlock
                 numbersLevelBlock={Object.keys(stateWords[letterSelect])}
+                selectedLevelBlock={numberWordBlock}
                 onclick={hendlerSelectWordBlock}
                 onclickStartAgain={hendlerStartAgain}
                 levelsComplied={stateLevelWordsFinal[letterSelect]}

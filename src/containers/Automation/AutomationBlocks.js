@@ -2,7 +2,7 @@
 import { connect, useDispatch, useSelector } from "react-redux";
 
 import BoxCoinsLevelCompleted from '../../components/Completed/BoxCoinsLevelCompleted';
-import SelectingLevelBlock from '../../UserInterface/SelectingLevelBlock';
+import SelectingLevelBlock from '../../components/Automation/SelectingLevelBlock';
 import LevelBlock from '../../components/Automation/LevelBlock';
 import LevelCompleted from '../../components/Completed/LevelCompleted';
 import FinaleTakePrize from '../../components/Completed/FinaleTakePrize';
@@ -129,6 +129,8 @@ function AutomationBlocks(props) {
         dispatch(takePrizeNullAllFlagsButtonClick(stateLevelCompleted, letterSelect));
     }
 
+    
+
     useEffect(() => {
         return () => {
             dispatch(sourceStateLettersBlocks());
@@ -140,6 +142,7 @@ function AutomationBlocks(props) {
 
             <SelectingLevelBlock
                 numbersLevelBlock={Object.keys(stateLetters)}
+                selectedLevelBlock={numberLevelBlock}
                 namesLevelBlock={namesLevelBlock}
                 onclick={hendlerSelectLevelBlock}
                 onclickStartAgain={hendlerFinaleLetterTakePrize}

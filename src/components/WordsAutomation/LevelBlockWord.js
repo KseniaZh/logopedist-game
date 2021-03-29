@@ -24,8 +24,9 @@ function LevelBlockWord(props) {
                         />
                         : <div className='level-block-word-button'>
                             <div>{props.data}</div>
+                            <div>{props.name}</div>
                             <Button
-                                name={props.name}
+                                name='↻'
                                 onclick={props.onclickWord}
                                 data={props.data}
                                 classname='level-block-word-button__button'

@@ -21,6 +21,7 @@ const initialState = {
     "С": false,
     "Т": false,
     "Ф": false,
+    "Х": false,
     "Ц": false,
     "Ч": false,
     "Ш": false,

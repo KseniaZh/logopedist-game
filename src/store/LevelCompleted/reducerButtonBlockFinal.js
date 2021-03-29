@@ -126,6 +126,14 @@ const initialState = {
             [false, false, false, false, false, false],
             [false, false, false, false, false, false],
         ],
+    "Х": [
+            [false, false, false, false, false, false],
+            [false, false, false, false, false, false],
+            [false, false, false, false, false, false],
+            [false, false, false, false, false, false],
+            [false, false, false, false, false, false],
+            [false, false, false, false, false, false],
+        ],
     "Ц": [
             [false, false, false, false, false, false],
             [false, false, false, false, false, false],

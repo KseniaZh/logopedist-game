@@ -7,8 +7,8 @@
 } from "./types";
 
 const initialState = {
-    "Б": [false, false, false,],
-    "В": [false, false, false,],
+    "Б": [false, false, false, false],
+    "В": [false, false, false, false],
     "Г": [false, false, false,],
     "Д": [false, false, false,],
     "Ж": [false, false, false,],
@@ -18,10 +18,11 @@ const initialState = {
     "М": [false, false, false, ],
     "Н": [false, false, false, ],
     "П": [false, false, false, ],
-    "Р": [false, false, false, ],
+    "Р": [false, false, false, false],
     "С": [false, false, false, ],
     "Т": [false, false, false, ],
-    "Ф": [false, false, false, ],
+    "Ф": [false, false, false,],
+  //  "Х": [false, false, false,],
     "Ц": [false, false, false, ],
     "Ч": [false, false, false, ],
     "Ш": [false, false, false, ],

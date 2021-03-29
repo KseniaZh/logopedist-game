@@ -19,7 +19,7 @@ function ProgressShop(props) {
         <div
             className="prize-shop"
         >
-            <div className="prize-shop-header">ТВО-Я КОЛ-ЛЕК-ЦИ-Я :</div>
+            <div className="prize-shop-header">ТВО-И ПРИ-ЗЫ</div>
             {
                 arrsImages.map((arrImg, index) => {
                     return <Progress
